@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Trendyol",
+    "type": "lever",
+    "url": "https://jobs.lever.co/trendyol",
+    "api_url": "https://api.lever.co/v0/postings/trendyol?mode=json"
+  },
+  {
+    "name": "Getir",
+    "type": "greenhouse",
+    "url": "https://boards.greenhouse.io/getir",
+    "api_url": "https://boards-api.greenhouse.io/v1/boards/getir/jobs"
+  },
+  {
+    "name": "Hepsiburada",
+    "type": "lever",
+    "url": "https://jobs.lever.co/hepsiburada",
+    "api_url": "https://api.lever.co/v0/postings/hepsiburada?mode=json"
+  },
+  {
+    "name": "Yemeksepeti (Delivery Hero)",
+    "type": "greenhouse",
+    "url": "https://boards.greenhouse.io/yemeksepeti",
+    "api_url": "https://boards-api.greenhouse.io/v1/boards/yemeksepeti/jobs"
+  },
+  {
+    "name": "Insider",
+    "type": "lever",
+    "url": "https://jobs.lever.co/insiderone",
+    "api_url": "https://api.lever.co/v0/postings/insiderone?mode=json"
+  },
+  {
+    "name": "Peak Games",
+    "type": "greenhouse",
+    "url": "https://boards.greenhouse.io/peakgames",
+    "api_url": "https://boards-api.greenhouse.io/v1/boards/peakgames/jobs"
+  },
+  {
+    "name": "Zynga Turkey",
+    "type": "greenhouse",
+    "url": "https://boards.greenhouse.io/zynga",
+    "api_url": "https://boards-api.greenhouse.io/v1/boards/zynga/jobs?location=Istanbul"
+  },
+  {
+    "name": "Papara",
+    "type": "generic",
+    "url": "https://papara.com/en/about-us",
+    "api_url": null,
+    "selector": "a[href*='career'], a[href*='job'], a[href*='kariyer']"
+  },
+  {
+    "name": "Param",
+    "type": "generic",
+    "url": "https://www.param.com.tr/kariyer",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], [class*='ilan']"
+  },
+  {
+    "name": "Garanti BBVA",
+    "type": "generic",
+    "url": "https://www.garantibbvakariyer.com",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], h3, h4"
+  },
+  {
+    "name": "Akbank",
+    "type": "generic",
+    "url": "https://www.akbankkariyer.com",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], [class*='ilan']"
+  },
+  {
+    "name": "Ziraat Teknoloji",
+    "type": "generic",
+    "url": "https://kariyer.ziraatteknoloji.com",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], [class*='ilan'], a[href*='ilan']"
+  },
+  {
+    "name": "Intertech",
+    "type": "generic",
+    "url": "https://www.intertech.com.tr/kariyer",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], [class*='ilan']"
+  },
+  {
+    "name": "Turkcell",
+    "type": "generic",
+    "url": "https://kariyerim.turkcell.com.tr",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], [class*='ilan'], a[href*='job']"
+  },
+  {
+    "name": "Migros Teknoloji",
+    "type": "generic",
+    "url": "https://www.migroskurumsal.com/kariyer",
+    "api_url": null,
+    "selector": "[class*='job'], [class*='position'], a[href*='basvur']"
+  },
+  {
+    "name": "Hepsipay",
+    "type": "lever",
+    "url": "https://jobs.lever.co/hepsipay",
+    "api_url": "https://api.lever.co/v0/postings/hepsipay?mode=json"
+  },
+  {
+    "name": "Vodafone TR",
+    "type": "greenhouse",
+    "url": "https://boards.greenhouse.io/vodafoneturkiye",
+    "api_url": "https://boards-api.greenhouse.io/v1/boards/vodafoneturkiye/jobs"
+  }
+]

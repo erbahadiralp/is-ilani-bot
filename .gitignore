@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.env
+*.egg-info/
+dist/
+build/
+
+# Veritabanı
+*.db
+*.sqlite
+*.sqlite3
+
+# Loglar
+*.log
+logs/
+
+# Playwright
+playwright-driver/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Test
+.pytest_cache/
+htmlcov/
+.coverage

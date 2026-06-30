@@ -1,0 +1,22 @@
+# Job Hunter Telegram Bot - Bağımlılıklar
+
+# JobSpy — LinkedIn, Indeed scraping (Playwright/proxy gerekmez)
+python-jobspy==1.1.80
+
+# HTTP İstekleri (Kariyer.net)
+requests==2.31.0
+beautifulsoup4==4.12.3
+# lxml kaldırıldı — Python'ın built-in html.parser'ı kullanılıyor (Python 3.13 uyumlu)
+
+# Telegram (Python 3.13 uyumlu v21.3+)
+python-telegram-bot>=21.3
+
+# Zamanlayıcı
+APScheduler==3.10.4
+
+# Ortam Değişkenleri
+python-dotenv==1.0.1
+
+# Yardımcı
+pytz==2024.1
+pandas>=2.0.0
