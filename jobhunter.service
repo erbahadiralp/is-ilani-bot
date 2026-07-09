@@ -5,13 +5,13 @@ After=network.target
 [Service]
 Type=simple
 # !! Aşağıdaki yolları kendi kullanıcı adınıza göre düzenleyin !!
-User=ubuntu
-WorkingDirectory=/home/ubuntu/isilan_bot
-ExecStart=/home/ubuntu/isilan_bot/venv/bin/python main.py
+User=youruser
+WorkingDirectory=/home/youruser/isapp
+ExecStart=/home/youruser/isapp/venv/bin/python main.py
 Restart=always
 RestartSec=10
-StandardOutput=append:/home/ubuntu/isilan_bot/bot.log
-StandardError=append:/home/ubuntu/isilan_bot/bot.log
+StandardOutput=append:/home/youruser/isapp/bot.log
+StandardError=append:/home/youruser/isapp/bot.log
 Environment="PYTHONUNBUFFERED=1"
 
 [Install]

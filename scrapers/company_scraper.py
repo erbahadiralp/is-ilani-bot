@@ -60,6 +60,18 @@ class CompanyScraper(BaseScraper):
         super().__init__()
         self.companies = self._load_companies()
 
+    def _get_request(self, url: str, headers: dict = None, proxies: dict = None, timeout: int = 15) -> requests.Response:
+        """SSL hatası durumunda verify=False ile tekrar deneyen güvenli requests sarmalayıcısı."""
+        try:
+            resp = requests.get(url, headers=headers, proxies=proxies, timeout=timeout)
+            resp.raise_for_status()
+            return resp
+        except requests.exceptions.SSLError:
+            self.logger.warning("SSL doğrulama hatası, doğrulamayı devre dışı bırakarak tekrar deneniyor: %s", url)
+            resp = requests.get(url, headers=headers, proxies=proxies, timeout=timeout, verify=False)
+            resp.raise_for_status()
+            return resp
+
     def _load_companies(self) -> list[dict]:
         """companies.json'dan şirket listesini yükle."""
         try:
@@ -87,6 +99,8 @@ class CompanyScraper(BaseScraper):
                     jobs = self._scrape_lever(company)
                 elif ctype == "greenhouse":
                     jobs = self._scrape_greenhouse(company)
+                elif ctype == "teamtailor":
+                    jobs = self._scrape_teamtailor(company)
                 else:
                     jobs = self._scrape_generic(company)
 
@@ -116,8 +130,7 @@ class CompanyScraper(BaseScraper):
             return []
 
         headers = {"User-Agent": self.rotate_user_agent()}
-        resp = requests.get(api_url, headers=headers, timeout=15)
-        resp.raise_for_status()
+        resp = self._get_request(api_url, headers=headers, timeout=15)
 
         data = resp.json()
         if not isinstance(data, list):
@@ -163,8 +176,7 @@ class CompanyScraper(BaseScraper):
             return []
 
         headers = {"User-Agent": self.rotate_user_agent()}
-        resp = requests.get(api_url, headers=headers, timeout=15)
-        resp.raise_for_status()
+        resp = self._get_request(api_url, headers=headers, timeout=15)
 
         data = resp.json()
         job_list = data.get("jobs", []) if isinstance(data, dict) else []
@@ -199,6 +211,55 @@ class CompanyScraper(BaseScraper):
 
         return jobs
 
+    # ─── Teamtailor ATS ──────────────────────────────────────────────────────
+    def _scrape_teamtailor(self, company: dict) -> list[dict]:
+        """
+        Teamtailor ATS JSON API'si.
+        https://{slug}.teamtailor.com/jobs.json
+        """
+        url = company.get("url") or company.get("api_url")
+        if not url:
+            return []
+
+        parsed = urllib.parse.urlparse(url)
+        base_url = f"{parsed.scheme}://{parsed.netloc}"
+        api_url = f"{base_url}/jobs.json"
+
+        headers = {"User-Agent": self.rotate_user_agent()}
+        try:
+            resp = self._get_request(api_url, headers=headers, timeout=15)
+            data = resp.json()
+        except Exception as e:
+            self.logger.debug("Teamtailor API hatası (%s): %s", company["name"], e)
+            return []
+
+        job_list = data if isinstance(data, list) else data.get("jobs", [])
+        jobs = []
+
+        for item in job_list:
+            title = item.get("title", "") or item.get("name", "")
+            if not title:
+                continue
+            if not self._passes_company_filter(title):
+                continue
+
+            location = "Belirtilmemiş"
+            loc = item.get("location", {})
+            if isinstance(loc, dict):
+                location = loc.get("name") or loc.get("city") or "Belirtilmemiş"
+
+            job_url = item.get("absolute_url") or item.get("url") or url
+
+            jobs.append({
+                "title": title,
+                "company": company["name"],
+                "location": location,
+                "source": "company",
+                "url": job_url,
+            })
+
+        return jobs
+
     # ─── Generic HTML ────────────────────────────────────────────────────────
     def _scrape_generic(self, company: dict) -> list[dict]:
         """
@@ -218,8 +279,7 @@ class CompanyScraper(BaseScraper):
         }
         proxies = self.get_proxy_url()
 
-        resp = requests.get(url, headers=headers, proxies=proxies, timeout=15)
-        resp.raise_for_status()
+        resp = self._get_request(url, headers=headers, proxies=proxies, timeout=15)
 
         soup = BeautifulSoup(resp.text, "html.parser")
         jobs = []

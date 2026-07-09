@@ -79,7 +79,7 @@
   {
     "name": "Intertech",
     "type": "generic",
-    "url": "https://www.intertech.com.tr/kariyer",
+    "url": "https://www.intertech.com.tr/",
     "api_url": null,
     "selector": "[class*='job'], [class*='position'], [class*='ilan']"
   },
@@ -98,15 +98,51 @@
     "selector": "[class*='job'], [class*='position'], a[href*='basvur']"
   },
   {
-    "name": "Hepsipay",
-    "type": "lever",
-    "url": "https://jobs.lever.co/hepsipay",
-    "api_url": "https://api.lever.co/v0/postings/hepsipay?mode=json"
+    "name": "Dream Games",
+    "type": "teamtailor",
+    "url": "https://dreamgames.teamtailor.com"
   },
   {
-    "name": "Vodafone TR",
+    "name": "Rollic Games",
+    "type": "teamtailor",
+    "url": "https://rollicgames.teamtailor.com"
+  },
+  {
+    "name": "Spyke Games",
+    "type": "teamtailor",
+    "url": "https://spykegames.teamtailor.com"
+  },
+  {
+    "name": "Good Job Games",
+    "type": "teamtailor",
+    "url": "https://goodjobgames.teamtailor.com"
+  },
+  {
+    "name": "Gram Games",
     "type": "greenhouse",
-    "url": "https://boards.greenhouse.io/vodafoneturkiye",
-    "api_url": "https://boards-api.greenhouse.io/v1/boards/vodafoneturkiye/jobs"
+    "url": "https://boards.greenhouse.io/gramgames",
+    "api_url": "https://boards-api.greenhouse.io/v1/boards/gramgames/jobs"
+  },
+  {
+    "name": "Codeway",
+    "type": "lever",
+    "url": "https://jobs.lever.co/codeway",
+    "api_url": "https://api.lever.co/v0/postings/codeway?mode=json"
+  },
+  {
+    "name": "Jotform",
+    "type": "generic",
+    "url": "https://www.jotform.com/jobs/",
+    "api_url": null,
+    "selector": "a[href*='/career/'], a[href*='/jobs/'], a[class*='job']"
+  },
+  {
+    "name": "Picus Security",
+    "type": "generic",
+    "url": "https://www.picussecurity.com/",
+    "api_url": null,
+    "selector": "a[href*='/careers/'], a[href*='/jobs/'], a[class*='job']"
   }
 ]
+
+

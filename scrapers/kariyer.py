@@ -35,33 +35,46 @@ class KariyerScraper(BaseScraper):
             random_tls_extension_order=True
         )
 
+        # Her sorgu için ilk 3 sayfayı tara (orijinaldeki gibi sayfalama)
         for query in config.SEARCH_QUERIES:
             self.logger.info("Kariyer.net sorgu: '%s'", query)
-            try:
-                jobs = self._scrape_query(session, query)
-                for job in jobs:
-                    url = job["url"]
-                    if url not in seen_urls:
-                        seen_urls.add(url)
-                        all_jobs.append(job)
-            except Exception as e:
-                self.logger.warning("Kariyer.net sorgu hatası ('%s'): %s", query, e)
-            self.random_sleep(3, 6) # slightly longer sleep to avoid detection
+            for page in range(1, 4):
+                try:
+                    jobs = self._scrape_query(session, query, page)
+                    if not jobs:
+                        break  # Sayfa boşsa sonraki sorguya geç
+                    
+                    new_count = 0
+                    for job in jobs:
+                        url = job["url"]
+                        if url not in seen_urls:
+                            seen_urls.add(url)
+                            all_jobs.append(job)
+                            new_count += 1
+                    
+                    self.logger.info("  → Sayfa %d: %d yeni ilan bulundu", page, new_count)
+                    if new_count == 0:
+                        break  # Bu sayfadaki tüm ilanlar zaten görülmüşse döngüden çık
+                except Exception as e:
+                    self.logger.warning("Kariyer.net sorgu hatası ('%s' - Sayfa %d): %s", query, page, e)
+                    break
+                self.random_sleep(3, 6) # blocklanmamak için gecikme
 
         return all_jobs
 
-    def _scrape_query(self, session, query: str) -> list[dict]:
-        """Tek bir sorgu için Kariyer.net'i tara."""
+    def _scrape_query(self, session, query: str, page: int) -> list[dict]:
+        """Tek bir sorgu ve sayfa için Kariyer.net'i tara."""
         params = {
             "q": query,
             "city": "istanbul",
+            "cp": str(page),
         }
         url = f"{self.BASE_URL}?{urllib.parse.urlencode(params)}"
 
         headers = {
-            "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+            "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-            "Referer": "https://www.kariyer.net/",
+            "Referer": "https://www.google.com",
         }
 
         proxy_url = config.PROXY_URL or None
