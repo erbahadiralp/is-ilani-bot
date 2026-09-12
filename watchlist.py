@@ -44,6 +44,8 @@ TECH = ["monitoring specialist", "system engineer", "systems engineer", "network
         "computer engineer", "bilgisayar mühendisi", "developer", "geliştirici", "development",
         "qa", "test engineer", "test mühendisi", "quality assurance", "sdet",
         "android", "ios", "mobile", "mobil", "embedded", "gömülü", "artificial intelligence"]
+# Program ve uzman yardimcisi basliklarinda alan kaniti olarak kabul edilen terimler.
+TECH_TITLE = TECH + ["bt", "it", "bilişim", "bilgi işlem", "tech", "technology", "teknoloji"]
 SENIOR = ["senior", "lead", "manager", "müdür", "direktör", "principal", "experienced",
           "mid-level", "mid level", "staff engineer", "kıdemli"]
 
@@ -60,15 +62,17 @@ def relevant(title, description=""):
         return False
     if re.search(r"(?:at least|minimum|min\.|en az)\s+(?:[3-9]|[1-9]\d)\s*(?:years?|yil)", text):
         return False
-    if program_name(title):
-        return True
+    # Kullanici yalniz yazilim/bilgisayar muhendisligi alanindaki ilanlari istiyor. Program,
+    # management trainee ve uzman yardimcisi basliklari deneyim kaniti sayilir fakat alan kaniti
+    # sayilmaz; basligin kendisi teknoloji alanini gostermelidir. Aciklama kullanilmaz: genel MT
+    # ilanlarinin kabul edilen bolumler listesinde "Bilgisayar Muhendisligi", KVKK metinlerinde
+    # "kisisel veri" gecer ve teknoloji disi ilanlari da eslestirir.
+    tech_title = any(matches(title, k) for k in TECH_TITLE)
     general_program = ["graduate program", "graduate programme", "management trainee",
                        "genç yetenek", "young talent", "yeni mezun programı", "yönetici adayı"]
-    if any(matches(title, k) for k in general_program):
-        return True
-    # Kullanici uzman yardimcisi ilanlarini teknoloji disinda da istedi.
-    if any(matches(title, k) for k in ["uzman yardımcısı", "uzman yard.", "uzm.yrd", "uzm. yrd.", "uzman yrd."]):
-        return True
+    assistant = ["uzman yardımcısı", "uzman yard.", "uzm.yrd", "uzm. yrd.", "uzman yrd."]
+    if program_name(title) or any(matches(title, k) for k in general_program + assistant):
+        return tech_title
     tech = any(matches(title, k) for k in TECH)
     early_title = any(matches(title, k) for k in EARLY)
     # Aciklamada 'juniorlara mentorluk' gibi ifadeler yeterli degil.

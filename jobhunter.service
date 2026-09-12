@@ -10,8 +10,8 @@ WorkingDirectory=/home/youruser/isapp
 ExecStart=/home/youruser/isapp/venv/bin/python main.py
 Restart=always
 RestartSec=10
-StandardOutput=append:/home/youruser/isapp/bot.log
-StandardError=append:/home/youruser/isapp/bot.log
+StandardOutput=null
+StandardError=journal
 Environment="PYTHONUNBUFFERED=1"
 
 [Install]

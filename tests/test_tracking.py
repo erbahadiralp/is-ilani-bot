@@ -36,9 +36,13 @@ class TrackingTests(unittest.TestCase):
         self.tmp.cleanup()
 
     def test_program_and_technology_filters(self):
-        for title in ["GNÇYTNK", "NestLéaders", "Management Trainee", "Yeni Mezun Programı", "Junior .NET Developer", "Junior Software Engineer"]:
+        for title in ["GNÇYTNK Yazılım", "Data MT", "Technology Management Trainee", "Yeni Mezun Programı - Bilgi Teknolojileri",
+                      "SAP Young Professionals Program Turkiye 2026", "Road to Tech", "Junior .NET Developer", "Junior Software Engineer"]:
             self.assertTrue(watchlist.relevant(title), title)
-        for title in ["Senior Java Developer", "Data Manager", "Leadership", "Sales Manager", "SAP Senior Consultant"]:
+        # Program adi tek basina alan kaniti degildir; teknoloji disi programlar bildirilmez.
+        for title in ["GNÇYTNK", "NestLéaders", "Management Trainee", "Yeni Mezun Programı",
+                      "Management Trainee for People & Culture (Fresh Grad)", "Sales Graduate Program",
+                      "Senior Java Developer", "Data Manager", "Leadership", "Sales Manager", "SAP Senior Consultant"]:
             self.assertFalse(watchlist.relevant(title), title)
         self.assertEqual(watchlist.program_name("HTML Developer"), "")
 
@@ -57,10 +61,13 @@ class TrackingTests(unittest.TestCase):
         self.assertFalse(watchlist.relevant("Junior Java Developer", "Minimum 3 years experience"))
 
     def test_assistant_specialist_titles(self):
-        for title in ["Uzman Yardımcısı", "UZMAN YARDIMCISI", "Uzman Yard.",
-                      "Finans Uzman Yardımcısı", "Bilgi Teknolojileri Uzman Yardımcısı"]:
+        for title in ["Bilgi Teknolojileri Uzman Yardımcısı", "Yazılım Geliştirme Uzman Yardımcısı",
+                      "BT — Uzman Yardımcısı", "Veri Analitiği Uzm. Yrd.", "Siber Güvenlik Uzman Yard."]:
             self.assertTrue(watchlist.relevant(title), title)
-        for title in ["Uzman", "Uzman Yardımcılığına Hazırlık", "Kıdemli Uzman Yardımcısı"]:
+        # Teknoloji alani belirtmeyen uzman yardimcisi ilanlari bildirilmez.
+        for title in ["Uzman Yardımcısı", "Teslimat Uzman Yardımcısı", "Yurt İçi Operasyon Uzman Yardımcısı",
+                      "Müşteri Memnuniyeti Uzman Yardımcısı - Engelli", "Finans Uzman Yardımcısı",
+                      "Uzman", "Uzman Yardımcılığına Hazırlık", "Kıdemli Uzman Yardımcısı"]:
             self.assertFalse(watchlist.relevant(title), title)
 
     def test_radar_does_not_treat_keywords_as_companies(self):

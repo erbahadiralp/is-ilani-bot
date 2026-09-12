@@ -501,8 +501,10 @@ class CompanySourcesTests(unittest.TestCase):
 
     def test_assistant_abbreviated_title(self):
         from watchlist import relevant
-        self.assertTrue(relevant('Dijital Pazarlama Uzm.Yrd / Uzmanı'))
-        self.assertFalse(relevant('Dijital Pazarlama Uzm.Yrd / Uzmanı','En az 5 yıl deneyimli'))
+        # Kisaltilmis unvan taninir; teknoloji alani yoksa yine elenir.
+        self.assertTrue(relevant('Yazılım Uzm.Yrd / Uzmanı'))
+        self.assertFalse(relevant('Dijital Pazarlama Uzm.Yrd / Uzmanı'))
+        self.assertFalse(relevant('Yazılım Uzm.Yrd / Uzmanı','En az 5 yıl deneyimli'))
 
     def test_removed_company_is_not_loaded_even_if_config_enabled(self):
         rows = [{"name":"Keep", "enabled":True}, {"name":"Remove", "enabled":True}, {"name":"Extra", "enabled":True, "extra_source":True}]
