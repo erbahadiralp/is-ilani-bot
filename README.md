@@ -1,3 +1,7 @@
+> Güncel ayrıntılı rehber: [PROJE_DOKUMANTASYONU.md](PROJE_DOKUMANTASYONU.md). Aşağıdaki eski bilgiler tarihsel olabilir.
+
+> Şirket/program takibi güncellemesi ve kurulum sınırları: [TRACKING.md](TRACKING.md). Şirket kapsamı: [SOURCE_COVERAGE.md](SOURCE_COVERAGE.md).
+
 # Job Hunter Telegram Bot 🤖
 
 LinkedIn, Indeed TR ve Kariyer.net'i otomatik tarayan, yeni junior/yeni mezun ilanlarını Telegram'a bildiren bot.

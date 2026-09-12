@@ -49,6 +49,8 @@ def main():
     logger.info("İlk tarama başlıyor (bekleme olmadan)...")
     try:
         run_scraping_cycle()
+        from scheduler import run_company_cycle
+        run_company_cycle()
     except Exception as e:
         logger.error("İlk tarama hatası: %s", e, exc_info=True)
 

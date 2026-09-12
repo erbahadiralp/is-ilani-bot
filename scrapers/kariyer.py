@@ -5,6 +5,7 @@ requests + BeautifulSoup4 kullanır (JavaScript gerektirmiyor).
 Her query için ayrı istek atar, sonuçları birleştirir.
 """
 
+import time
 import logging
 import urllib.parse
 
@@ -19,21 +20,20 @@ logger = logging.getLogger("scraper.kariyer")
 
 class KariyerScraper(BaseScraper):
     SOURCE_NAME = "kariyer"
+    _blocked_until = 0.0
 
     BASE_URL = "https://www.kariyer.net/is-ilanlari"
 
     def scrape(self) -> list[dict]:
         """Kariyer.net'i tüm sorgular için tara."""
-        import tls_client
+        if not config.KARIYER_ENABLED or time.monotonic() < type(self)._blocked_until:
+            return []
 
         all_jobs: list[dict] = []
         seen_urls: set[str] = set()
 
         # Create one session to persist cookies/headers like a real browser
-        session = tls_client.Session(
-            client_identifier="chrome_120",
-            random_tls_extension_order=True
-        )
+        session = requests.Session()
 
         # Her sorgu için ilk 3 sayfayı tara (orijinaldeki gibi sayfalama)
         for query in config.SEARCH_QUERIES:
@@ -57,7 +57,8 @@ class KariyerScraper(BaseScraper):
                         break  # Bu sayfadaki tüm ilanlar zaten görülmüşse döngüden çık
                 except Exception as e:
                     self.logger.warning("Kariyer.net sorgu hatası ('%s' - Sayfa %d): %s", query, page, e)
-                    break
+                    type(self)._blocked_until = time.monotonic() + 6 * 3600
+                    return all_jobs
                 self.random_sleep(3, 6) # blocklanmamak için gecikme
 
         return all_jobs
@@ -82,13 +83,15 @@ class KariyerScraper(BaseScraper):
         resp = session.get(
             url,
             headers=headers,
-            proxy=proxy_url,
-            timeout_seconds=15,
+            proxies={"http": proxy_url, "https": proxy_url} if proxy_url else None,
+            timeout=15,
             allow_redirects=True,
         )
         if resp.status_code != 200:
             raise Exception(f"HTTP {resp.status_code}")
 
+        if any(marker in resp.text.lower() for marker in ("verify you are human", "cf-chl-", "access denied", "captcha")):
+            raise RuntimeError("Kariyer.net erisim dogrulamasi istedi; tarama durduruldu")
         return self._parse(resp.text)
 
     def _parse(self, html: str) -> list[dict]:

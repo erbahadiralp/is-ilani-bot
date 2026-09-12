@@ -11,6 +11,7 @@ from typing import Optional
 
 import config
 from .base import BaseScraper
+from watchlist import relevant, program_name
 
 logger = logging.getLogger("scraper.jobspy")
 
@@ -69,7 +70,7 @@ class JobSpyScraper(BaseScraper):
             results_wanted=15,          # Sorgu başına max ilan
             hours_old=24 * 7,           # Son 7 günlük ilanlar
             country_indeed="Turkey",
-            linkedin_fetch_description=False,  # Hız için açıklama getirme
+            linkedin_fetch_description=True,   # Yeni mezun/deneyim kosullarini da kontrol et
             verbose=0,                  # Log sessiz
         )
 
@@ -80,7 +81,7 @@ class JobSpyScraper(BaseScraper):
         for _, row in df.iterrows():
             try:
                 job = self._row_to_job(row)
-                if job and self.passes_filter(job["title"]):
+                if job and relevant(job["title"], job.get("description", "")):
                     jobs.append(job)
             except Exception as e:
                 self.logger.debug("Satır parse hatası: %s", e)
@@ -107,6 +108,8 @@ class JobSpyScraper(BaseScraper):
 
         return {
             "title":    title,
+            "description": str(row.get("description", "") or ""),
+            "program": program_name(title),
             "company":  company or "Belirtilmemiş",
             "location": location or config.SEARCH_LOCATION,
             "source":   source,

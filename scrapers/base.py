@@ -72,30 +72,8 @@ class BaseScraper(ABC):
         - Kara listedeki kelimelerden herhangi biri varsa → REDDEDİLDİ
         - Beyaz listedeki kelimelerden en az birini içermeli → KABUL EDİLDİ
         """
-        title_lower = title.lower()
-
-        # 1. Teknoloji filtre kontrolü
-        has_tech = False
-        for kw in config.TECH_KEYWORDS:
-            if kw.lower() in title_lower:
-                has_tech = True
-                break
-        if not has_tech:
-            self.logger.debug("Teknoloji eşleşmedi: %s", title)
-            return False
-
-        # 2. Kara liste kontrolü
-        for kw in config.BLACKLIST_KEYWORDS:
-            if kw.lower() in title_lower:
-                self.logger.debug("Kara liste eşleşti ('%s'): %s", kw, title)
-                return False
-
-        # 3. Beyaz liste kontrolü
-        for kw in config.WHITELIST_KEYWORDS:
-            if kw.lower() in title_lower:
-                return True
-
-        return True
+        from watchlist import relevant
+        return relevant(title)
 
     # ─── Soyut Metot ─────────────────────────────────────────────────────────
     @abstractmethod

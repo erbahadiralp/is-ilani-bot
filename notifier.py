@@ -9,6 +9,7 @@ NOT: APScheduler thread'leri ve python-telegram-bot v20 event loop'u çakışmas
 ile yapılır (asyncio kullanılmaz).
 """
 
+from html import escape
 import logging
 import time
 from datetime import datetime
@@ -82,6 +83,7 @@ def send_job_alert(job: dict) -> bool:
     Beklenen job anahtarları:
         title, company, location, source, url
     """
+    job = {k: escape(str(v), quote=True) for k, v in job.items()}
     source_emoji = {
         "linkedin": "💼",
         "kariyer":  "🇹🇷",
@@ -98,12 +100,15 @@ def send_job_alert(job: dict) -> bool:
     }.get(job.get("source", "").lower(), job.get("source", "Bilinmiyor"))
 
     text = (
-        "🚀 <b>YENİ İLAN BULDUM!</b>\n"
+        ("📣 <b>PROGRAM SAYFASI DEĞİŞTİ</b>\n" if job.get("source") == "program" else "🚀 <b>YENİ İLAN BULDUM!</b>\n")
+        +
         "\n"
         f"{emoji} <b>Kaynak:</b> {source_display}\n"
         f"🏢 <b>Firma:</b> {job.get('company', 'Belirtilmemiş')}\n"
         f"👤 <b>Pozisyon:</b> {job.get('title', 'Belirtilmemiş')}\n"
         f"📍 <b>Konum:</b> {job.get('location', 'Belirtilmemiş')}\n"
+        f"🎓 <b>Program:</b> {job.get('program', '') or '—'}\n"
+        f"{job.get('note', '')}\n"
         "\n"
         f'<a href="{job.get("url", "#")}">📎 İlana Git / Başvur</a>'
     )

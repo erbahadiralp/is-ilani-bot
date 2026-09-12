@@ -90,6 +90,10 @@ async def cmd_tara(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 def _build_status_text(stats: dict) -> str:
     from scheduler import _get_window, INTERVAL_DAY, INTERVAL_EVE
 
+    from watchlist import coverage
+    radar = coverage()
+    missing = sum(c["status"] == "needs_source" for c in radar)
+    enabled_count = sum(c["enabled"] for c in radar)
     total = stats.get("total", 0)
     by_source = stats.get("by_source", {})
     last_found = stats.get("last_found_at", "Henüz yok")
@@ -109,6 +113,9 @@ def _build_status_text(stats: dict) -> str:
         "🤖 <b>Job Hunter Bot — Aktif ✅</b>\n"
         "\n"
         f"{window_status}\n"
+        f"🏢 Şirket/program: 24 saat, her {config.COMPANY_INTERVAL_MINUTES} dk\n"
+        f"Radar: {len(radar)} şirket, etkin kaynağa eşleşen: {enabled_count}, adresi eksik: {missing}\n"
+        "Etkin kaynak sayısı anlık erişim garantisi değildir; kaynak hataları loglanır.\n"
         "\n"
         f"📊 <b>Toplam takip edilen ilan:</b> {total}\n"
         "\n"
@@ -120,7 +127,7 @@ def _build_status_text(stats: dict) -> str:
         "<b>Tarama programı:</b>\n"
         f"  ☀️ 08:00–18:59 → her {INTERVAL_DAY} dk\n"
         f"  🌆 19:00–23:59 → her {INTERVAL_EVE} dk\n"
-        "  🌙 00:00–07:59 → tarama yok\n"
+        "  🌙 00:00–07:59 → LinkedIn/Indeed taraması yok\n"
         "\n"
         "📌 <b>Komutlar:</b>\n"
         "  /tara — Anlık tarama başlat\n"

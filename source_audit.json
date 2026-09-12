@@ -1,0 +1,1134 @@
+[
+  {
+    "name": "Trendyol",
+    "url": "https://jobs.lever.co/trendyol",
+    "checked_at": "2026-09-10T17:43:30.104369+00:00",
+    "status": "ok",
+    "raw": 24,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Getir",
+    "url": "https://getir.careers-page.com/",
+    "checked_at": "2026-09-10T17:43:30.268757+00:00",
+    "status": "ok",
+    "raw": 8,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Yemeksepeti (Delivery Hero)",
+    "url": "https://careers.smartrecruiters.com/DeliveryHero",
+    "checked_at": "2026-09-10T17:43:30.209864+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Insider",
+    "url": "https://jobs.lever.co/insiderone",
+    "checked_at": "2026-09-10T17:43:30.311273+00:00",
+    "status": "ok",
+    "raw": 117,
+    "eligible": 1,
+    "jobs": [
+      {
+        "title": "Management Trainee for People & Culture (Fresh Grad)",
+        "company": "Insider",
+        "source": "company",
+        "location": "Istanbul",
+        "url": "https://jobs.lever.co/insiderone/93762a98-207d-44ad-9145-05180706781b",
+        "program": "Management Trainee",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Peak Games",
+    "url": "https://www.peak.com/open-positions",
+    "checked_at": "2026-09-10T17:43:38.926631+00:00",
+    "status": "ok",
+    "raw": 20,
+    "eligible": 2,
+    "jobs": [
+      {
+        "title": "Software Engineer, Games (New Grad)",
+        "company": "Peak Games",
+        "source": "company",
+        "location": "Türkiye",
+        "url": "https://www.peak.com/open-positions/software-engineer-games-new-grad",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      },
+      {
+        "title": "Software Engineer, Backend (New Grad)",
+        "company": "Peak Games",
+        "source": "company",
+        "location": "Türkiye",
+        "url": "https://www.peak.com/open-positions/software-engineer-backend-new-grad",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Garanti BBVA",
+    "url": "https://kariyer.garantibbva.com.tr/tum-kariyer-firsatlari",
+    "checked_at": "2026-09-10T17:43:42.429665+00:00",
+    "status": "ok",
+    "raw": 20,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Akbank",
+    "url": "https://kariyer.akbank.com",
+    "checked_at": "2026-09-10T17:43:43.301976+00:00",
+    "status": "ok",
+    "raw": 22,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Ziraat Teknoloji",
+    "url": "https://ziraatteknoloji.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:43:43.640989+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Turkcell",
+    "url": "https://kariyerim.turkcell.com.tr/kariyer-firsatlari",
+    "checked_at": "2026-09-10T17:43:44.139924+00:00",
+    "status": "ok",
+    "raw": 8,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Dream Games",
+    "url": "https://jobs.lever.co/dreamgames",
+    "checked_at": "2026-09-10T17:43:44.772100+00:00",
+    "status": "ok",
+    "raw": 21,
+    "eligible": 2,
+    "jobs": [
+      {
+        "title": "DevOps Engineer (New Grad)",
+        "company": "Dream Games",
+        "source": "company",
+        "location": "Istanbul",
+        "url": "https://jobs.lever.co/dreamgames/c801dd86-2e4a-4355-910b-969e847ee076",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      },
+      {
+        "title": "Software Engineer (New Grad)",
+        "company": "Dream Games",
+        "source": "company",
+        "location": "Istanbul",
+        "url": "https://jobs.lever.co/dreamgames/0714caf0-4077-44f3-a1d4-8985b9baf1bc",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Spyke Games",
+    "url": "https://jobs.lever.co/spyke-games",
+    "checked_at": "2026-09-10T17:43:45.290209+00:00",
+    "status": "ok",
+    "raw": 10,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Good Job Games",
+    "url": "https://job-boards.greenhouse.io/goodjobgames",
+    "checked_at": "2026-09-10T17:43:45.911652+00:00",
+    "status": "ok",
+    "raw": 31,
+    "eligible": 2,
+    "jobs": [
+      {
+        "title": "Junior Game Developer",
+        "company": "Good Job Games",
+        "source": "company",
+        "location": "Sarıyer, Istanbul",
+        "url": "https://job-boards.greenhouse.io/goodjobgames/jobs/5332845003",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      },
+      {
+        "title": "Software Engineer - New Grad",
+        "company": "Good Job Games",
+        "source": "company",
+        "location": "Sarıyer, Istanbul",
+        "url": "https://job-boards.greenhouse.io/goodjobgames/jobs/7574002003",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Gram Games",
+    "url": "https://boards.greenhouse.io/gramgames",
+    "checked_at": "2026-09-10T17:43:46.574513+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Codeway",
+    "url": "https://jobs.ashbyhq.com/codeway",
+    "checked_at": "2026-09-10T17:43:47.159190+00:00",
+    "status": "ok",
+    "raw": 11,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Picus Security",
+    "url": "https://jobs.lever.co/picus",
+    "checked_at": "2026-09-10T17:43:47.728219+00:00",
+    "status": "ok",
+    "raw": 7,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Softtech",
+    "url": "https://career2.successfactors.eu/career?company=softtechya&lang=tr_TR",
+    "checked_at": "2026-09-10T17:43:47.912491+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "iyzico",
+    "url": "https://jobs.lever.co/iyzico",
+    "checked_at": "2026-09-10T17:43:49.944360+00:00",
+    "status": "ok",
+    "raw": 12,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Midas",
+    "url": "https://jobs.lever.co/getmidas",
+    "checked_at": "2026-09-10T17:43:52.092579+00:00",
+    "status": "ok",
+    "raw": 11,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Commencis",
+    "url": "https://www.commencis.com/careers/",
+    "checked_at": "2026-09-10T17:43:53.166814+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "DefineX",
+    "url": "https://definexconsulting.applytojob.com/",
+    "checked_at": "2026-09-10T17:43:53.852880+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Etiya",
+    "url": "https://www.etiya.com/tr/sirketimiz/kariyer",
+    "checked_at": "2026-09-10T17:43:56.402087+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Sestek",
+    "url": "https://www.sestek.com/careers",
+    "checked_at": "2026-09-10T17:43:57.142076+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Netaş",
+    "url": "https://kariyer.netas.com.tr/search",
+    "checked_at": "2026-09-10T17:43:57.499508+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "VeriPark",
+    "url": "https://www.veripark.com/jobs",
+    "checked_at": "2026-09-10T17:43:58.262750+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Architecht",
+    "url": "https://join.architecht.com/jobs",
+    "checked_at": "2026-09-10T17:43:59.523111+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Türkiye İş Bankası",
+    "url": "https://ik.isbank.com.tr/is-ilanlari-listesi",
+    "checked_at": "2026-09-10T17:44:00.071285+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Yapı Kredi",
+    "url": "https://www.kockariyerim.com/jobAd/search?companyIds=eacaaf15-8c8f-4c8a-8b99-b50811725c7a",
+    "checked_at": "2026-09-10T17:44:00.645880+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "QNB Türkiye",
+    "url": "https://www.qnbkariyer.com/ilanlar/",
+    "checked_at": "2026-09-10T17:44:01.392313+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Kuveyt Türk",
+    "url": "https://www.katilbize.com/w/kt/ilan/site.aspx",
+    "checked_at": "2026-09-10T17:44:02.114186+00:00",
+    "status": "ok",
+    "raw": 34,
+    "eligible": 1,
+    "jobs": [
+      {
+        "title": "Dijital Pazarlama (Web Siteleri) Uzm.Yrd / Uzmanı",
+        "company": "Kuveyt Türk",
+        "source": "company",
+        "location": "Türkiye",
+        "url": "https://www.katilbize.com/A8NYKAUDJKLSWLCWJMNLTRMDH2.JOB",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Innova",
+    "url": "https://innova.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:44:05.152655+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Bigger Games",
+    "url": "https://jobs.ashbyhq.com/biggergames",
+    "checked_at": "2026-09-10T17:44:05.681347+00:00",
+    "status": "ok",
+    "raw": 13,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Agave Games",
+    "url": "https://jobs.ashbyhq.com/agavegames",
+    "checked_at": "2026-09-10T17:44:06.069740+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Akinon",
+    "url": "https://akinoninternetyatirimveprojegelistirmeas.applytojob.com/apply",
+    "checked_at": "2026-09-10T17:44:06.450399+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "P.I. Works",
+    "url": "https://piworks.net/About/JobOpportunities",
+    "checked_at": "2026-09-10T17:44:07.035740+00:00",
+    "status": "ok",
+    "raw": 26,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Grand Games",
+    "url": "https://jobs.lever.co/grand",
+    "checked_at": "2026-09-10T17:44:07.628621+00:00",
+    "status": "ok",
+    "raw": 9,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Roof Stacks",
+    "url": "https://jobs.lever.co/roofstacks",
+    "checked_at": "2026-09-10T17:44:09.285530+00:00",
+    "status": "ok",
+    "raw": 23,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Segmentify",
+    "url": "https://segmentify.com/open-position/",
+    "checked_at": "2026-09-10T17:44:14.173588+00:00",
+    "status": "ok",
+    "raw": 2,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Panteon",
+    "url": "https://www.panteon.games/",
+    "checked_at": "2026-09-10T17:44:15.556335+00:00",
+    "status": "ok",
+    "raw": 14,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Bosch Türkiye",
+    "url": "https://careers.smartrecruiters.com/BoschGroup",
+    "checked_at": "2026-09-10T17:44:17.707507+00:00",
+    "status": "ok",
+    "raw": 43,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Visa",
+    "url": "https://careers.smartrecruiters.com/Visa",
+    "checked_at": "2026-09-10T17:44:20.052587+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Baykar",
+    "url": "https://kariyer.baykartech.com/tr/open-positions/?page=1&type=1",
+    "checked_at": "2026-09-10T17:44:20.468369+00:00",
+    "status": "ok",
+    "raw": 204,
+    "eligible": 2,
+    "jobs": [
+      {
+        "title": "Üretim Planlama Uzmanı / Uzman Yardımcısı",
+        "company": "Baykar",
+        "source": "company",
+        "location": "Türkiye",
+        "url": "https://kariyer.baykartech.com/tr/acik-pozisyonlar/detay/uretim-planlama-uzmani-uzman-yardimcisi",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      },
+      {
+        "title": "Yazılım Geliştirme Ar-Ge Mühendisi",
+        "company": "Baykar",
+        "source": "company",
+        "location": "Türkiye",
+        "url": "https://kariyer.baykartech.com/tr/acik-pozisyonlar/detay/yazilim-gelistirme-ar-ge-muhendisi",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Vispera",
+    "url": "https://www.careers-page.com/vispera-5",
+    "checked_at": "2026-09-10T17:44:20.982902+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "SAP Türkiye",
+    "url": "https://jobs.sap.com/search/?q=&optionsFacetsDD_country=TR",
+    "checked_at": "2026-09-10T17:44:21.201928+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 2,
+    "jobs": [
+      {
+        "title": "Solution Advisor Associate CX - SAP Academy for Customer Success - Türkiye (Hybrid)",
+        "company": "SAP Türkiye",
+        "source": "company",
+        "location": "Istanbul, TR, 34700",
+        "url": "https://jobs.sap.com/job/Istanbul-Solution-Advisor-Associate-CX-SAP-Academy-for-Customer-Success-T%C3%BCrkiye-%28Hybrid%29-34700/1425115533/",
+        "program": "SAP Academy for Customer Success",
+        "application_deadline": "",
+        "published_at": ""
+      },
+      {
+        "title": "SAP Young Professionals Program Turkiye 2026",
+        "company": "SAP Türkiye",
+        "source": "company",
+        "location": "Istanbul, TR, 34700",
+        "url": "https://jobs.sap.com/job/Istanbul-SAP-Young-Professionals-Program-Turkiye-2026-34700/1422732333/",
+        "program": "SAP Young Professionals Program",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "EY",
+    "url": "https://careers.ey.com/search/?q=&optionsFacetsDD_country=TR",
+    "checked_at": "2026-09-10T17:44:21.658777+00:00",
+    "status": "ok",
+    "raw": 28,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "ZF Türkiye",
+    "url": "https://jobs.zf.com/search/?q=&optionsFacetsDD_country=TR",
+    "checked_at": "2026-09-10T17:44:25.698239+00:00",
+    "status": "ok",
+    "raw": 9,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "PwC",
+    "url": "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers",
+    "checked_at": "2026-09-10T17:44:26.772106+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Salesforce Türkiye",
+    "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
+    "checked_at": "2026-09-10T17:44:31.306495+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Maersk Türkiye",
+    "url": "https://maersk.wd3.myworkdayjobs.com/Maersk_Careers",
+    "checked_at": "2026-09-10T17:44:33.678135+00:00",
+    "status": "ok",
+    "raw": 8,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Philips Türkiye",
+    "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers",
+    "checked_at": "2026-09-10T17:44:37.976012+00:00",
+    "status": "ok",
+    "raw": 5,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Accenture",
+    "url": "https://accenture.wd103.myworkdayjobs.com/AccentureCareers",
+    "checked_at": "2026-09-10T17:44:38.111407+00:00",
+    "status": "ok",
+    "raw": 22,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Mastercard",
+    "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
+    "checked_at": "2026-09-10T17:44:45.454481+00:00",
+    "status": "ok",
+    "raw": 8,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Edenred Türkiye",
+    "url": "https://edenpeople.wd3.myworkdayjobs.com/Edenred_Careers",
+    "checked_at": "2026-09-10T17:44:51.523947+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Samsung Türkiye",
+    "url": "https://sec.wd3.myworkdayjobs.com/Samsung_Careers",
+    "checked_at": "2026-09-10T17:44:52.967873+00:00",
+    "status": "ok",
+    "raw": 40,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Valeo Türkiye",
+    "url": "https://valeo.wd3.myworkdayjobs.com/Valeo_Jobs",
+    "checked_at": "2026-09-10T17:44:56.541765+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "ABB Türkiye",
+    "url": "https://abb.wd3.myworkdayjobs.com/EXTERNAL_CAREER_PAGE",
+    "checked_at": "2026-09-10T17:44:56.815158+00:00",
+    "status": "ok",
+    "raw": 20,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "GE Vernova Türkiye",
+    "url": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite",
+    "checked_at": "2026-09-10T17:44:57.821749+00:00",
+    "status": "ok",
+    "raw": 5,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Renault Türkiye",
+    "url": "https://alliancewd.wd3.myworkdayjobs.com/RENAULT-GROUP-CAREERS",
+    "checked_at": "2026-09-10T17:44:59.844887+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "ING",
+    "url": "https://careers.ing.com/en/location/turkiye-jobs/2618/298795/2/en/search-jobs",
+    "checked_at": "2026-09-10T17:45:00.770291+00:00",
+    "status": "ok",
+    "raw": 29,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "AlbarakaTech Global",
+    "url": "https://www.albarakatech.com/tr/kesfet",
+    "checked_at": "2026-09-10T17:45:04.047379+00:00",
+    "status": "ok",
+    "raw": 2,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Albaraka Türk",
+    "url": "https://albaraka.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:45:04.456419+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Sipay",
+    "url": "https://app.gethirex.com/o/sipay/",
+    "checked_at": "2026-09-10T17:45:06.533580+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "HSBC Türkiye",
+    "url": "https://portal.careers.hsbc.com/careers?location=Turkey",
+    "checked_at": "2026-09-10T17:45:07.669714+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Halkbank",
+    "url": "https://kariyer.halkbank.com.tr/tr/sende-aramiza-katil/yeni-mezunum.html",
+    "checked_at": "2026-09-10T17:45:07.807084+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Ziraat Katılım",
+    "url": "https://kariyer.ziraatkatilim.com.tr/ilan/site.aspx",
+    "checked_at": "2026-09-10T17:45:08.079966+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Emlak Katılım",
+    "url": "https://kariyer.aynicatialtinda.com.tr/ilan/site.aspx",
+    "checked_at": "2026-09-10T17:45:08.323745+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Vakıf Katılım",
+    "url": "https://vakifkatilim.bizdekariyer.com/jobs",
+    "checked_at": "2026-09-10T17:45:08.879399+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Logo Yazılım",
+    "url": "https://live.peoplise.com/logo/career",
+    "checked_at": "2026-09-10T17:45:10.403885+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Paraşüt",
+    "url": "https://parasut.recruitee.com/",
+    "checked_at": "2026-09-10T17:45:10.966413+00:00",
+    "status": "ok",
+    "raw": 2,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "TurkNet",
+    "url": "https://kariyer.turk.net/",
+    "checked_at": "2026-09-10T17:45:11.325392+00:00",
+    "status": "ok",
+    "raw": 25,
+    "eligible": 1,
+    "jobs": [
+      {
+        "title": "Junior Monitoring Specialist",
+        "company": "TurkNet",
+        "source": "company",
+        "location": "Türkiye",
+        "url": "https://kariyer.turk.net/jobs/0ede7c97-7e1a-4f05-9487-17500d35065f",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Yapı Kredi Teknoloji",
+    "url": "https://www.kockariyerim.com/jobAd/search?companyIds=1545c20c-9472-47e0-8350-6d745dd60614",
+    "checked_at": "2026-09-10T17:45:12.467828+00:00",
+    "status": "ok",
+    "raw": 2,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Multinet Up",
+    "url": "https://jobs.flowq.com/en/company/multinetup",
+    "checked_at": "2026-09-10T17:45:13.487537+00:00",
+    "status": "ok",
+    "raw": 14,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Hitit",
+    "url": "https://www.hitit.com/tr/kariyer",
+    "checked_at": "2026-09-10T17:45:15.070315+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Sovos Türkiye",
+    "url": "https://recruit.hirebridge.com/v3/jobs/list.aspx?cid=6875&jobgroup=1002",
+    "checked_at": "2026-09-10T17:45:15.194969+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Koç Topluluğu",
+    "url": "https://www.kockariyerim.com/jobAd/search",
+    "checked_at": "2026-09-10T17:45:18.295090+00:00",
+    "status": "ok",
+    "raw": 89,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Microsoft Türkiye",
+    "url": "https://apply.careers.microsoft.com/careers?location=Turkey",
+    "checked_at": "2026-09-10T17:47:06.516005+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Google Türkiye",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/?location=Turkey",
+    "checked_at": "2026-09-10T17:45:20.051861+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "TUSAŞ",
+    "url": "https://savunmakariyer.com/firmalar/68af143b32ae3c57e36daf70",
+    "checked_at": "2026-09-10T17:45:21.015401+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Amazon / AWS Türkiye",
+    "url": "https://amazon.jobs/en/locations/istanbul-turkey",
+    "checked_at": "2026-09-10T17:45:22.882539+00:00",
+    "status": "ok",
+    "raw": 17,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Gratis",
+    "url": "https://kariyer.gratis.com",
+    "checked_at": "2026-09-10T17:45:26.279857+00:00",
+    "status": "ok",
+    "raw": 84,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Yaşar Holding",
+    "url": "https://career.yasar.com.tr",
+    "checked_at": "2026-09-10T17:45:28.013195+00:00",
+    "status": "ok",
+    "raw": 12,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Arkas",
+    "url": "https://careers.arkas.com",
+    "checked_at": "2026-09-10T17:45:29.522241+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Coşkunöz",
+    "url": "https://careers.coskunoz.com.tr",
+    "checked_at": "2026-09-10T17:45:29.990833+00:00",
+    "status": "ok",
+    "raw": 7,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Oyak Renault",
+    "url": "https://alliancewd.wd3.myworkdayjobs.com/renault-group-careers",
+    "checked_at": "2026-09-10T17:45:30.126041+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "BP Türkiye",
+    "url": "https://bpinternational.wd3.myworkdayjobs.com/bpCareers",
+    "checked_at": "2026-09-10T17:45:30.262624+00:00",
+    "status": "ok",
+    "raw": 5,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Strategy&",
+    "url": "https://pwc.wd3.myworkdayjobs.com/CRM_Experienced_Careers_Site",
+    "checked_at": "2026-09-10T17:45:30.801814+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Borusan Holding",
+    "url": "https://careers.borusan.com",
+    "checked_at": "2026-09-10T17:45:31.110815+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "sahibinden.com",
+    "url": "https://s-kariyer.com",
+    "checked_at": "2026-09-10T17:45:31.611101+00:00",
+    "status": "ok",
+    "raw": 15,
+    "eligible": 1,
+    "jobs": [
+      {
+        "title": "Müşteri Memnuniyeti Uzman Yardımcısı - Engelli",
+        "company": "sahibinden.com",
+        "source": "company",
+        "location": "Belirtilmemiş",
+        "url": "https://s-kariyer.com/job/1000-M%C3%BC%C5%9Fteri-Memnuniyeti-Uzman-Yard%C4%B1mc%C4%B1s%C4%B1-Engelli/1344046855/",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "Martur Fompak",
+    "url": "https://careers.marturfompak.com",
+    "checked_at": "2026-09-10T17:45:31.989852+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Çalık Holding",
+    "url": "https://careers.calik.com",
+    "checked_at": "2026-09-10T17:45:32.805350+00:00",
+    "status": "ok",
+    "raw": 3,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Kalyon Holding",
+    "url": "https://kariyer.kalyonholding.com",
+    "checked_at": "2026-09-10T17:45:32.931062+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "ROKETSAN",
+    "url": "https://kariyer.roketsan.com.tr/jobs",
+    "checked_at": "2026-09-10T17:45:33.361830+00:00",
+    "status": "ok",
+    "raw": 6,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "BİM",
+    "url": "https://kariyer.bim.com.tr/jobs",
+    "checked_at": "2026-09-10T17:45:34.369201+00:00",
+    "status": "ok",
+    "raw": 4,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Vodafone Türkiye",
+    "url": "https://vodafone.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:45:35.109763+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Aksigorta",
+    "url": "https://aksigorta.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:45:36.867264+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "HDI Sigorta",
+    "url": "https://hdisigorta.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:45:37.169955+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Mapfre Sigorta",
+    "url": "https://mapfre.hrpeak.com/jobs",
+    "checked_at": "2026-09-10T17:45:37.514632+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Farplas",
+    "url": "https://www.farplas.com/tr/insan/acik-pozisyonlar/",
+    "checked_at": "2026-09-10T17:45:38.556228+00:00",
+    "status": "ok",
+    "raw": 5,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Çimsa",
+    "url": "https://cimsakariyerim.com/jobs",
+    "checked_at": "2026-09-10T17:45:39.303770+00:00",
+    "status": "ok",
+    "raw": 9,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Continental Türkiye",
+    "url": "https://careers.smartrecruiters.com/Continental",
+    "checked_at": "2026-09-10T17:45:40.211804+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Türk Telekom",
+    "url": "https://basvuru.turktelekomkariyer.com.tr/ilan/site.aspx",
+    "checked_at": "2026-09-10T17:45:40.510877+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Anadolu Grubu",
+    "url": "https://careers.anadolukariyerim.com",
+    "checked_at": "2026-09-10T17:45:40.806246+00:00",
+    "status": "ok",
+    "raw": 18,
+    "eligible": 1,
+    "jobs": [
+      {
+        "title": "Teslimat Uzman Yardımcısı",
+        "company": "Anadolu Grubu",
+        "source": "company",
+        "location": "Kocaeli, TR",
+        "url": "https://careers.anadolukariyerim.com/job/Kocaeli-Teslimat-Uzman-Yard%C4%B1mc%C4%B1s%C4%B1/1411780933/",
+        "program": "",
+        "application_deadline": "",
+        "published_at": ""
+      }
+    ]
+  },
+  {
+    "name": "CEVA Logistics",
+    "url": "https://jobs.cmacgm-group.com",
+    "checked_at": "2026-09-10T17:45:40.997813+00:00",
+    "status": "ok",
+    "raw": 8,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Alp Aviation",
+    "url": "https://alpinsankaynaklari.com/acik-pozisyonlar",
+    "checked_at": "2026-09-10T17:45:42.043248+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Deloitte",
+    "url": "https://career2.successfactors.eu/career?company=drtyonetim",
+    "checked_at": "2026-09-10T17:45:42.331422+00:00",
+    "status": "ok",
+    "raw": 25,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Mercedes-Benz Otomotiv",
+    "url": "https://career55.sapsf.eu/career?company=mercedes02",
+    "checked_at": "2026-09-10T17:45:43.095415+00:00",
+    "status": "ok",
+    "raw": 1,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Honeywell",
+    "url": "https://careers.honeywell.com",
+    "checked_at": "2026-09-10T17:46:13.403163+00:00",
+    "status": "ok",
+    "raw": 2,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Nokia Türkiye",
+    "url": "https://jobs.nokia.com",
+    "checked_at": "2026-09-10T17:46:52.813546+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  },
+  {
+    "name": "Oracle Türkiye",
+    "url": "https://careers.oracle.com",
+    "checked_at": "2026-09-10T17:46:13.588877+00:00",
+    "status": "ok",
+    "raw": 0,
+    "eligible": 0,
+    "jobs": []
+  }
+]

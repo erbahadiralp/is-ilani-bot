@@ -45,12 +45,15 @@ PROXY_URL: str | None = os.getenv("PROXY_URL") or None
 # ─── Arama Sorguları ────────────────────────────────────────────────────────
 # (Türkçe + İngilizce kombinasyonları)
 SEARCH_QUERIES: list[str] = [
-    "junior java",
-    "junior python",
-    "junior data",
-    "yeni mezun java",
-    "sap abap",
-    "veri bilimci junior",
+    "junior java", "junior backend", "junior spring boot", "new grad java",
+    "junior python", "junior data scientist", "junior data engineer",
+    "junior veri bilimci", "yeni mezun veri mühendisi",
+    "junior software engineer", "new grad software engineer", "yeni mezun yazılım",
+    "junior frontend", "junior full stack", "junior .net", "junior mobile developer",
+    "junior QA engineer", "junior devops", "junior cloud engineer",
+    "junior machine learning", "junior cyber security", "junior embedded software",
+    "junior sap abap", "graduate program", "management trainee", "genç yetenek",
+    "uzman yardımcısı",
 ]
 
 # Teknolojik hedeflerimiz — broad aramalar sonrasında hedeflenen işleri filtreler
@@ -102,3 +105,7 @@ WHITELIST_KEYWORDS: list[str] = [
     "fresher",
 ]
 
+
+# Sirket sayfalari ayri bir gorevle gece dahil izlenir.
+COMPANY_INTERVAL_MINUTES = max(5, int(os.getenv("COMPANY_INTERVAL_MINUTES", "15")))
+KARIYER_ENABLED = os.getenv("KARIYER_ENABLED", "false").lower() == "true"

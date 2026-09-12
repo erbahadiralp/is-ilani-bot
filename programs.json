@@ -1,0 +1,133 @@
+[
+  {
+    "company": "Softtech",
+    "name": "Yetenek Kuşağı",
+    "url": "https://softtech.com.tr/yetenekkusagi",
+    "selector": "section.roadDefinitionSection, section.roadEligibilitySection",
+    "expected_text": "Yetenek Kuşağı"
+  },
+  {
+    "company": "Turkcell",
+    "name": "GNÇYTNK",
+    "url": "https://kariyerim.turkcell.com.tr/genc-yetenek",
+    "selector": "main",
+    "expected_text": "GNÇYTNK"
+  },
+  {
+    "company": "OBSS",
+    "name": "OBSS New Graduate Program",
+    "url": "https://obss.tech/en/new-graduates/",
+    "selector": "section",
+    "expected_text": "New Graduate"
+  },
+  {
+    "company": "Kuveyt Türk",
+    "name": "TechTalent",
+    "url": "https://www.katilbize.com/s/techtalent.html",
+    "selector": "section.bg-extra-dark-gray",
+    "expected_text": "TechTalent",
+    "image_selector": "img[src*=\"techtalent-\"]"
+  },
+  {
+    "company": "Fibabanka",
+    "name": "Fintern Future Talent Program",
+    "url": "https://www.fibabanka.com.tr/hakkimizda/insan-kaynaklari/fintern-future-talent-programi",
+    "selector": ".fiba-personal-banking__main",
+    "expected_text": "Fintern"
+  },
+  {
+    "company": "Vakıf Katılım",
+    "name": "START / My Talent ve Yetenek Programları",
+    "url": "https://bizdekariyer.com/yetenek-programlarimiz",
+    "selector": "main",
+    "expected_text": "My Talent"
+  },
+  {
+    "company": "VakıfBank",
+    "name": "İşe Alım Duyuruları",
+    "url": "https://www.vakifbank.com.tr/tr/bankamiz/hakkimizda/insan-kaynaklari/kariyer/bankacilik-ilanlari",
+    "selector": "main .searchContent",
+    "expected_text": "",
+    "expected_page_title": "Bankacılık İlanları",
+    "min_chars": 20
+  },
+  {
+    "company": "Ziraat Bankası",
+    "name": "İşe Alım Duyuruları",
+    "url": "https://www.ziraatbank.com.tr/tr/bankamiz/insan-kaynaklari/duyurular",
+    "selector": "#ContentSection .sub-page-content",
+    "expected_text": "",
+    "expected_page_title": "Duyurular",
+    "min_chars": 20
+  },
+  {
+    "company": "Garanti BBVA",
+    "name": "Talent Week / Data MT / Tech Talent",
+    "url": "https://kariyer.garantibbva.com.tr/ilk-adiminda-garanti-bbva",
+    "selector": ".intro-card:has(.intro-card__title:-soup-contains(\"Talent Week\", \"Data MT\", \"Tech Talent\", \"Management Trainee\", \"Bilgi Teknolojileri\"))",
+    "expected_text": "Talent Week",
+    "expected_page_title": "Genç Yetenek Programları",
+    "embedded_component": "ExperienceProgramsLink",
+    "embedded_title_terms": [
+      "Talent Week",
+      "Data MT",
+      "Tech Talent",
+      "Management Trainee",
+      "Bilgi Teknolojileri"
+    ]
+  },
+  {
+    "company": "Albaraka Türk",
+    "name": "Kariyer ve Yetenek Duyuruları",
+    "url": "https://www.albarakainsankiymetleri.com/",
+    "selector": "#kariyer",
+    "expected_text": "Bizimle Çalışmak İster misiniz",
+    "expected_page_title": "Albaraka Türk",
+    "link_selector": ".ilan-content a[href]"
+  },
+  {
+    "company": "Bimser",
+    "name": "Açık Pozisyonlar Sayfası",
+    "url": "https://bimser.com/acik-pozisyonlar/",
+    "selector": "section:has(h1), section.bg-gray-50",
+    "expected_text": "Açık Pozisyonlar",
+    "expected_page_title": "Açık Pozisyonlar",
+    "link_selector": "section.bg-gray-50 a[href]"
+  },
+  {
+    "company": "Figopara",
+    "name": "Pozisyonlar Sayfası",
+    "url": "https://figopara.com/kariyer",
+    "selector": "section:has(h2:-soup-contains(\"Pozisyonlarımız\"))",
+    "expected_text": "Pozisyonlarımız",
+    "expected_page_title": "Figopara Kariyer"
+  },
+  {
+    "company": "ASELSAN",
+    "name": "Öğrenci & Yeni Mezun",
+    "url": "https://webapi.aselsan.com/career/sections?menuSlug=ogrenci-yeni-mezun&locale=tr",
+    "json_locale": "tr",
+    "json_fields": [
+      "title",
+      "html"
+    ],
+    "expected_text": "Yeni Mezun",
+    "min_chars": 400,
+    "selector": "",
+    "note": "Resmi ASELSAN kariyer sitesinin icerik API'si; anonim ilan listesi yok."
+  },
+  {
+    "company": "ASELSAN",
+    "name": "NBMT Programı",
+    "url": "https://webapi.aselsan.com/career/sections?menuSlug=nbmt-programi&locale=tr",
+    "json_locale": "tr",
+    "json_fields": [
+      "title",
+      "html"
+    ],
+    "expected_text": "NBMT",
+    "min_chars": 300,
+    "selector": "",
+    "note": "Resmi ASELSAN Next Big Move to Turkiye program icerigi."
+  }
+]

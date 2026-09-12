@@ -10,6 +10,7 @@ Zaman dilimine göre akıllı tarama aralığı:
 """
 
 import logging
+import threading
 from datetime import datetime
 
 import pytz
@@ -19,9 +20,15 @@ from apscheduler.triggers.cron import CronTrigger
 import config
 import database
 import notifier
+from scrapers.program_scraper import ProgramScraper
+from scrapers.kariyer_mail import KariyerMailScraper
 from scrapers import KariyerScraper, JobSpyScraper, CompanyScraper
 
 logger = logging.getLogger("scheduler")
+
+_delivery_lock = threading.Lock()
+_company_lock = threading.Lock()
+_cycle_lock = threading.Lock()
 
 TZ = pytz.timezone("Europe/Istanbul")
 
@@ -64,6 +71,15 @@ QUIET_END   = (NIGHT_END_H,   0)
 
 # ─── Scraping Döngüsü ────────────────────────────────────────────────────────
 def run_scraping_cycle(force: bool = False) -> dict:
+    if not _cycle_lock.acquire(blocking=False):
+        return {"total_new": 0, "by_source": {}, "skipped": True}
+    try:
+        return _run_scraping_cycle(force)
+    finally:
+        _cycle_lock.release()
+
+
+def _run_scraping_cycle(force: bool = False) -> dict:
     """
     Tüm kaynakları tarar, yeni ilanları DB'ye kaydeder, Telegram'a bildirir.
 
@@ -89,10 +105,11 @@ def run_scraping_cycle(force: bool = False) -> dict:
     logger.info("=" * 55)
 
     scrapers = [
-        KariyerScraper(),   # Kariyer.net — requests + BS4
         JobSpyScraper(),    # LinkedIn + Indeed — python-jobspy
-        CompanyScraper(),   # Şirket kariyer sayfaları (Lever/Greenhouse API)
     ]
+
+    if config.KARIYER_ENABLED:
+        scrapers.append(KariyerScraper())
 
     total_new = 0
     stats_per_source: dict[str, int] = {}
@@ -106,7 +123,7 @@ def run_scraping_cycle(force: bool = False) -> dict:
         for job in jobs:
             if database.save_job(job):
                 new_count += 1
-                notifier.send_job_alert(job)
+
 
         stats_per_source[source] = new_count
         total_new += new_count
@@ -116,6 +133,11 @@ def run_scraping_cycle(force: bool = False) -> dict:
     logger.info("Döngü tamamlandı. Toplam yeni ilan: %d", total_new)
     logger.info("=" * 55)
 
+    deliver_pending()
+    if force:
+        company_result = run_company_cycle()
+        total_new += company_result["total_new"]
+        stats_per_source.update(company_result["by_source"])
     return {
         "total_new": total_new,
         "by_source": stats_per_source,
@@ -124,10 +146,32 @@ def run_scraping_cycle(force: bool = False) -> dict:
     }
 
 
+def deliver_pending():
+    with _delivery_lock:
+        for job_id, job in database.pending_alerts():
+            if notifier.send_job_alert(job):
+                database.mark_notified(job_id)
+            else:
+                break
+
+
+def run_company_cycle():
+    if not _company_lock.acquire(blocking=False):
+        return {"total_new": 0, "by_source": {}, "skipped": True}
+    try:
+        counts = {}
+        for scraper in (CompanyScraper(), ProgramScraper(), KariyerMailScraper()):
+            counts[scraper.SOURCE_NAME] = sum(database.save_job(job) for job in scraper.safe_scrape())
+        deliver_pending()
+        return {"total_new": sum(counts.values()), "by_source": counts, "skipped": False}
+    finally:
+        _company_lock.release()
+
+
 # ─── DB Bakımı ───────────────────────────────────────────────────────────────
 def run_db_cleanup():
     """30 günden eski ilanları sil."""
-    deleted = database.cleanup_old_jobs(days=30)
+    deleted = database.cleanup_old_jobs(days=3650)
     logger.info("Haftalık DB temizliği: %d eski kayıt silindi", deleted)
 
 
@@ -148,6 +192,11 @@ def create_scheduler() -> BackgroundScheduler:
             "misfire_grace_time": 300,  # 5 dk gecikmeye tolerans
         },
     )
+
+    scheduler.add_job(run_company_cycle, "interval", minutes=config.COMPANY_INTERVAL_MINUTES,
+                      id="company_watch", name="Sirket ve program takibi (24 saat)", replace_existing=True)
+    scheduler.add_job(deliver_pending, "interval", minutes=2,
+                      id="notification_retry", replace_existing=True)
 
     # ── Görev 1: Mesai Taraması (08:00 – 18:59, her 15 dk) ──────────────────
     # minute='0,15,30,45' → 08:00, 08:15, 08:30, 08:45, 09:00 ... 18:45

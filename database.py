@@ -5,6 +5,8 @@ database.py — SQLite veritabanı işlemleri
 - İstatistik sorguları
 """
 
+from contextlib import contextmanager
+import json
 import hashlib
 import logging
 import sqlite3
@@ -20,10 +22,15 @@ Job = dict  # title, company, location, source, url
 
 
 # ─── Yardımcı ───────────────────────────────────────────────────────────────
-def _get_conn() -> sqlite3.Connection:
-    conn = sqlite3.connect(config.DB_PATH)
+@contextmanager
+def _get_conn():
+    conn = sqlite3.connect(config.DB_PATH, timeout=30)
     conn.row_factory = sqlite3.Row
-    return conn
+    try:
+        with conn:
+            yield conn
+    finally:
+        conn.close()
 
 
 def _job_id(url: str) -> str:
@@ -54,6 +61,12 @@ def init_db() -> None:
         conn.execute(
             "CREATE INDEX IF NOT EXISTS idx_source ON jobs(source)"
         )
+        columns = {r[1] for r in conn.execute("PRAGMA table_info(jobs)")}
+        if "notified" not in columns:
+            conn.execute("ALTER TABLE jobs ADD COLUMN notified INTEGER NOT NULL DEFAULT 1")
+        if "payload" not in columns:
+            conn.execute("ALTER TABLE jobs ADD COLUMN payload TEXT")
+        conn.execute("CREATE TABLE IF NOT EXISTS program_state (url TEXT PRIMARY KEY, fingerprint TEXT NOT NULL)")
         conn.commit()
     logger.info("Veritabanı hazır: %s", config.DB_PATH)
 
@@ -74,15 +87,13 @@ def save_job(job: Job) -> bool:
     Yeni ilanı kaydet.
     Başarıyla kaydedildiyse True, zaten varsa False döner.
     """
-    if is_seen(job["url"]):
-        return False
-    job_id = _job_id(job["url"])
+    job_id = _job_id(job.get("dedup_key") or job["url"])
     with _get_conn() as conn:
         try:
             conn.execute(
                 """
-                INSERT INTO jobs (id, title, company, location, source, url, found_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO jobs (id, title, company, location, source, url, found_at, notified, payload)
+                VALUES (?, ?, ?, ?, ?, ?, ?, 0, ?)
                 """,
                 (
                     job_id,
@@ -92,6 +103,7 @@ def save_job(job: Job) -> bool:
                     job.get("source", ""),
                     job.get("url", ""),
                     datetime.now().isoformat(),
+                    json.dumps(job, ensure_ascii=False),
                 ),
             )
             conn.commit()
@@ -107,7 +119,7 @@ def cleanup_old_jobs(days: int = 30) -> int:
     cutoff = (datetime.now() - timedelta(days=days)).isoformat()
     with _get_conn() as conn:
         cursor = conn.execute(
-            "DELETE FROM jobs WHERE found_at < ?", (cutoff,)
+            "DELETE FROM jobs WHERE found_at < ? AND notified = 1", (cutoff,)
         )
         conn.commit()
         deleted = cursor.rowcount
@@ -147,3 +159,29 @@ def get_recent_jobs(limit: int = 5) -> list[dict]:
             (limit,),
         ).fetchall()
     return [dict(row) for row in rows]
+
+
+def pending_alerts(limit=100):
+    with _get_conn() as conn:
+        rows = conn.execute("SELECT id, payload FROM jobs WHERE notified = 0 ORDER BY found_at LIMIT ?", (limit,)).fetchall()
+    return [(row["id"], json.loads(row["payload"])) for row in rows]
+
+
+def mark_notified(job_id):
+    with _get_conn() as conn:
+        conn.execute("UPDATE jobs SET notified = 1 WHERE id = ?", (job_id,))
+
+
+def program_event(url, fingerprint, job):
+    """Ilk okumayi temel al; degisikligi ve bildirim kuyrugunu atomik kaydet."""
+    with _get_conn() as conn:
+        conn.execute("BEGIN IMMEDIATE")
+        old = conn.execute("SELECT fingerprint FROM program_state WHERE url = ?", (url,)).fetchone()
+        if old and old[0] != fingerprint:
+            # A->B->A gecisinde de yeni olay uretmek icin onceki degeri dahil et.
+            key = _job_id(url + old[0] + fingerprint + datetime.now().isoformat())
+            conn.execute("INSERT INTO jobs(id,title,company,location,source,url,found_at,notified,payload) VALUES(?,?,?,?,?,?,?,0,?)",
+                         (key, job["title"], job["company"], job["location"], job["source"], url,
+                          datetime.now().isoformat(), json.dumps(job, ensure_ascii=False)))
+        conn.execute("INSERT INTO program_state VALUES(?,?) ON CONFLICT(url) DO UPDATE SET fingerprint=excluded.fingerprint", (url, fingerprint))
+        return bool(old and old[0] != fingerprint)

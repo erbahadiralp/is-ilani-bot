@@ -1,0 +1,100 @@
+[
+  {
+    "company": "Softtech",
+    "name": "Yetenek Kuşağı",
+    "url": "https://softtech.com.tr/yetenekkusagi",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220053+00:00"
+  },
+  {
+    "company": "Turkcell",
+    "name": "GNÇYTNK",
+    "url": "https://kariyerim.turkcell.com.tr/genc-yetenek",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220074+00:00"
+  },
+  {
+    "company": "OBSS",
+    "name": "OBSS New Graduate Program",
+    "url": "https://obss.tech/en/new-graduates/",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220079+00:00"
+  },
+  {
+    "company": "Kuveyt Türk",
+    "name": "TechTalent",
+    "url": "https://www.katilbize.com/s/techtalent.html",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220081+00:00"
+  },
+  {
+    "company": "Fibabanka",
+    "name": "Fintern Future Talent Program",
+    "url": "https://www.fibabanka.com.tr/hakkimizda/insan-kaynaklari/fintern-future-talent-programi",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220084+00:00"
+  },
+  {
+    "company": "Vakıf Katılım",
+    "name": "START / My Talent ve Yetenek Programları",
+    "url": "https://bizdekariyer.com/yetenek-programlarimiz",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220088+00:00"
+  },
+  {
+    "company": "VakıfBank",
+    "name": "İşe Alım Duyuruları",
+    "url": "https://www.vakifbank.com.tr/tr/bankamiz/hakkimizda/insan-kaynaklari/kariyer/bankacilik-ilanlari",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220090+00:00"
+  },
+  {
+    "company": "Ziraat Bankası",
+    "name": "İşe Alım Duyuruları",
+    "url": "https://www.ziraatbank.com.tr/tr/bankamiz/insan-kaynaklari/duyurular",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220093+00:00"
+  },
+  {
+    "company": "Garanti BBVA",
+    "name": "Talent Week / Data MT / Tech Talent",
+    "url": "https://kariyer.garantibbva.com.tr/ilk-adiminda-garanti-bbva",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220095+00:00"
+  },
+  {
+    "company": "Albaraka Türk",
+    "name": "Kariyer ve Yetenek Duyuruları",
+    "url": "https://www.albarakainsankiymetleri.com/",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220098+00:00"
+  },
+  {
+    "company": "Bimser",
+    "name": "Açık Pozisyonlar Sayfası",
+    "url": "https://bimser.com/acik-pozisyonlar/",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220101+00:00"
+  },
+  {
+    "company": "Figopara",
+    "name": "Pozisyonlar Sayfası",
+    "url": "https://figopara.com/kariyer",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220103+00:00"
+  },
+  {
+    "company": "ASELSAN",
+    "name": "Öğrenci & Yeni Mezun",
+    "url": "https://webapi.aselsan.com/career/sections?menuSlug=ogrenci-yeni-mezun&locale=tr",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220105+00:00"
+  },
+  {
+    "company": "ASELSAN",
+    "name": "NBMT Programı",
+    "url": "https://webapi.aselsan.com/career/sections?menuSlug=nbmt-programi&locale=tr",
+    "status": "ok",
+    "checked_at": "2026-09-10T14:40:47.220107+00:00"
+  }
+]

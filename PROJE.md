@@ -1,3 +1,5 @@
+> Güncel ayrıntılı rehber: [PROJE_DOKUMANTASYONU.md](PROJE_DOKUMANTASYONU.md). Aşağıdaki eski bilgiler tarihsel olabilir.
+
 # Job Hunter Telegram Bot — Proje Dokümanı
 
 ## Amaç

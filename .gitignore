@@ -37,3 +37,7 @@ playwright-driver/
 .pytest_cache/
 htmlcov/
 .coverage
+
+.venv/
+
+.source-audit/
