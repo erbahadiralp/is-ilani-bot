@@ -1,12 +1,12 @@
 # Resmi şirket kaynakları — kapsam
 
-Radar: 301 şirket adı. Yapılandırılmış etkin kaynak: 108. Son kayıtlı kontrolü başarılı etkin kaynak: 108.
-Radarda etkin kaynağa eşleşen ad: 119. Kaynak adresi henüz eşleşmeyen: 146.
-Başarılı kontrollerde okunan ilan: 1310; filtreye uygun: 15.
+Radar: 301 şirket adı. Yapılandırılmış etkin kaynak: 96. Son kayıtlı kontrolü başarılı etkin kaynak: 96.
+Radarda etkin kaynağa eşleşen ad: 108. Kaynak adresi henüz eşleşmeyen: 146.
+Başarılı kontrollerde okunan ilan: 1268; filtreye uygun: 14.
 
 Bunlar geliştirme ortamındaki tarihli kontrollerdir; sunucunun anlık sağlık durumu değildir. Aynı şirketin listedeki farklı adları tek kaynağı paylaşabilir. Kaynağı bulunmuş ama devre dışı olan şirketler taranmaz.
 
-Şirket bazında: 119 doğrulanmış aktif kaynağa bağlı; 36 adresi kayıtlı fakat entegrasyonu tamamlanmamış; 146 adresi henüz kayıtlı değil.
+Şirket bazında: 108 doğrulanmış aktif kaynağa bağlı; 47 adresi kayıtlı fakat entegrasyonu tamamlanmamış; 146 adresi henüz kayıtlı değil.
 
 ## Etkin kaynaklar
 
@@ -19,7 +19,6 @@ Bunlar geliştirme ortamındaki tarihli kontrollerdir; sunucunun anlık sağlık
 | [Peak Games](https://www.peak.com/open-positions) | 2026-09-10T17:43:38.926631+00:00 | ok | 20 | 2 |
 | [Garanti BBVA](https://kariyer.garantibbva.com.tr/tum-kariyer-firsatlari) | 2026-09-10T17:43:42.429665+00:00 | ok | 20 | 0 |
 | [Akbank](https://kariyer.akbank.com) | 2026-09-10T17:43:43.301976+00:00 | ok | 22 | 0 |
-| [Ziraat Teknoloji](https://ziraatteknoloji.hrpeak.com/jobs) | 2026-09-10T17:43:43.640989+00:00 | ok | 0 | 0 |
 | [Turkcell](https://kariyerim.turkcell.com.tr/kariyer-firsatlari) | 2026-09-10T17:43:44.139924+00:00 | ok | 8 | 0 |
 | [Dream Games](https://jobs.lever.co/dreamgames) | 2026-09-10T17:43:44.772100+00:00 | ok | 21 | 2 |
 | [Spyke Games](https://jobs.lever.co/spyke-games) | 2026-09-10T17:43:45.290209+00:00 | ok | 10 | 0 |
@@ -36,12 +35,9 @@ Bunlar geliştirme ortamındaki tarihli kontrollerdir; sunucunun anlık sağlık
 | [Sestek](https://www.sestek.com/careers) | 2026-09-10T17:43:57.142076+00:00 | ok | 6 | 0 |
 | [Netaş](https://kariyer.netas.com.tr/search) | 2026-09-10T17:43:57.499508+00:00 | ok | 1 | 0 |
 | [VeriPark](https://www.veripark.com/jobs) | 2026-09-10T17:43:58.262750+00:00 | ok | 6 | 0 |
-| [Architecht](https://join.architecht.com/jobs) | 2026-09-10T17:43:59.523111+00:00 | ok | 3 | 0 |
 | [Türkiye İş Bankası](https://ik.isbank.com.tr/is-ilanlari-listesi) | 2026-09-10T17:44:00.071285+00:00 | ok | 0 | 0 |
 | [Yapı Kredi](https://www.kockariyerim.com/jobAd/search?companyIds=eacaaf15-8c8f-4c8a-8b99-b50811725c7a) | 2026-09-10T17:44:00.645880+00:00 | ok | 0 | 0 |
 | [QNB Türkiye](https://www.qnbkariyer.com/ilanlar/) | 2026-09-10T17:44:01.392313+00:00 | ok | 0 | 0 |
-| [Kuveyt Türk](https://www.katilbize.com/w/kt/ilan/site.aspx) | 2026-09-10T17:44:02.114186+00:00 | ok | 34 | 1 |
-| [Innova](https://innova.hrpeak.com/jobs) | 2026-09-10T17:44:05.152655+00:00 | ok | 0 | 0 |
 | [Bigger Games](https://jobs.ashbyhq.com/biggergames) | 2026-09-10T17:44:05.681347+00:00 | ok | 13 | 0 |
 | [Agave Games](https://jobs.ashbyhq.com/agavegames) | 2026-09-10T17:44:06.069740+00:00 | ok | 4 | 0 |
 | [Akinon](https://akinoninternetyatirimveprojegelistirmeas.applytojob.com/apply) | 2026-09-10T17:44:06.450399+00:00 | ok | 0 | 0 |
@@ -71,13 +67,11 @@ Bunlar geliştirme ortamındaki tarihli kontrollerdir; sunucunun anlık sağlık
 | [Renault Türkiye](https://alliancewd.wd3.myworkdayjobs.com/RENAULT-GROUP-CAREERS) | 2026-09-10T17:44:59.844887+00:00 | ok | 0 | 0 |
 | [ING](https://careers.ing.com/en/location/turkiye-jobs/2618/298795/2/en/search-jobs) | 2026-09-10T17:45:00.770291+00:00 | ok | 29 | 0 |
 | [AlbarakaTech Global](https://www.albarakatech.com/tr/kesfet) | 2026-09-10T17:45:04.047379+00:00 | ok | 2 | 0 |
-| [Albaraka Türk](https://albaraka.hrpeak.com/jobs) | 2026-09-10T17:45:04.456419+00:00 | ok | 1 | 0 |
 | [Sipay](https://app.gethirex.com/o/sipay/) | 2026-09-10T17:45:06.533580+00:00 | ok | 1 | 0 |
 | [HSBC Türkiye](https://portal.careers.hsbc.com/careers?location=Turkey) | 2026-09-10T17:45:07.669714+00:00 | ok | 1 | 0 |
 | [Halkbank](https://kariyer.halkbank.com.tr/tr/sende-aramiza-katil/yeni-mezunum.html) | 2026-09-10T17:45:07.807084+00:00 | ok | 1 | 0 |
 | [Ziraat Katılım](https://kariyer.ziraatkatilim.com.tr/ilan/site.aspx) | 2026-09-10T17:45:08.079966+00:00 | ok | 0 | 0 |
 | [Emlak Katılım](https://kariyer.aynicatialtinda.com.tr/ilan/site.aspx) | 2026-09-10T17:45:08.323745+00:00 | ok | 0 | 0 |
-| [Vakıf Katılım](https://vakifkatilim.bizdekariyer.com/jobs) | 2026-09-10T17:45:08.879399+00:00 | ok | 0 | 0 |
 | [Logo Yazılım](https://live.peoplise.com/logo/career) | 2026-09-10T17:45:10.403885+00:00 | ok | 6 | 0 |
 | [Paraşüt](https://parasut.recruitee.com/) | 2026-09-10T17:45:10.966413+00:00 | ok | 2 | 0 |
 | [TurkNet](https://kariyer.turk.net/) | 2026-09-10T17:45:11.325392+00:00 | ok | 25 | 1 |
@@ -103,15 +97,9 @@ Bunlar geliştirme ortamındaki tarihli kontrollerdir; sunucunun anlık sağlık
 | [Çalık Holding](https://careers.calik.com) | 2026-09-10T17:45:32.805350+00:00 | ok | 3 | 0 |
 | [Kalyon Holding](https://kariyer.kalyonholding.com) | 2026-09-10T17:45:32.931062+00:00 | ok | 4 | 0 |
 | [ROKETSAN](https://kariyer.roketsan.com.tr/jobs) | 2026-09-10T17:45:33.361830+00:00 | ok | 6 | 0 |
-| [BİM](https://kariyer.bim.com.tr/jobs) | 2026-09-10T17:45:34.369201+00:00 | ok | 4 | 0 |
-| [Vodafone Türkiye](https://vodafone.hrpeak.com/jobs) | 2026-09-10T17:45:35.109763+00:00 | ok | 0 | 0 |
-| [Aksigorta](https://aksigorta.hrpeak.com/jobs) | 2026-09-10T17:45:36.867264+00:00 | ok | 0 | 0 |
-| [HDI Sigorta](https://hdisigorta.hrpeak.com/jobs) | 2026-09-10T17:45:37.169955+00:00 | ok | 0 | 0 |
-| [Mapfre Sigorta](https://mapfre.hrpeak.com/jobs) | 2026-09-10T17:45:37.514632+00:00 | ok | 0 | 0 |
 | [Farplas](https://www.farplas.com/tr/insan/acik-pozisyonlar/) | 2026-09-10T17:45:38.556228+00:00 | ok | 5 | 0 |
 | [Çimsa](https://cimsakariyerim.com/jobs) | 2026-09-10T17:45:39.303770+00:00 | ok | 9 | 0 |
 | [Continental Türkiye](https://careers.smartrecruiters.com/Continental) | 2026-09-10T17:45:40.211804+00:00 | ok | 0 | 0 |
-| [Türk Telekom](https://basvuru.turktelekomkariyer.com.tr/ilan/site.aspx) | 2026-09-10T17:45:40.510877+00:00 | ok | 0 | 0 |
 | [Anadolu Grubu](https://careers.anadolukariyerim.com) | 2026-09-10T17:45:40.806246+00:00 | ok | 18 | 1 |
 | [CEVA Logistics](https://jobs.cmacgm-group.com) | 2026-09-10T17:45:40.997813+00:00 | ok | 8 | 0 |
 | [Alp Aviation](https://alpinsankaynaklari.com/acik-pozisyonlar) | 2026-09-10T17:45:42.043248+00:00 | ok | 1 | 0 |
@@ -131,13 +119,17 @@ Ek erken kariyer panoları: PwC: https://pwc.wd3.myworkdayjobs.com/Global_Campus
 | [Zynga Turkey](https://boards.greenhouse.io/zynga) | http_404 |  |
 | [Papara](https://careers.papara.com/en/all-jobs/) | http_403 | Kariyer alan adi aktif baglanti bulunamadi yaniti veriyor. Anonim Chromium ile de 403 doğrulandı. |
 | [Param](https://hr.param.com.tr/tr/kariyer-yolculugu) | http_403 | Resmi ana sayfanin kariyer yonlendirmesi; erisim reddedildi. Anonim Chromium ile de 403 doğrulandı. |
+| [Ziraat Teknoloji](https://ziraatteknoloji.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | [Intertech](https://www.intertech.com.tr/career.html) | linkedin_only | Resmi iş ilanları bağlantısı LinkedIn; Firsttech/Starttech programları resmi sayfada ayrı tanıtılıyor. |
 | [Migros Teknoloji](https://www.migroskurumsal.com/kariyer) | adapter_pending | Eski kaynak Migros genel kariyer tanitim sayfasi; ilan listesi degil. |
 | [Rollic Games](https://rollicgames.teamtailor.com) | http_404 |  |
 | [Jotform](https://www.jotform.com/tr/jobs/) | external_boards_only | Resmi Türkiye kariyer sayfası ilanlar için LinkedIn ve Kariyer.net bağlantıları veriyor. |
+| [Architecht](https://join.architecht.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | [KoçSistem](https://www.kocsistem.com.tr/kurumsal/kariyer) | shared_source | Koç Topluluğu ortak okuyucusu üzerinden Koç Kariyerim panosu izlenir; ayrı okuyucu çalıştırılmaz. |
+| [Kuveyt Türk](https://www.katilbize.com/w/kt/ilan/site.aspx) | blocked_from_server | Resmi katilbize.com panosu yerel Türkiye IP'sinden çalışıyor fakat Almanya'daki VPS'ten her taramada okunamıyor (Türkiye dışı trafiğe yanıt vermiyor). Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | [Doğuş Teknoloji](https://www.d-teknoloji.com.tr/tr/kariyer) | linkedin_only | Resmi kariyer fırsatları bağlantısı LinkedIn ilanlarına yönlendiriyor. |
 | [OBSS](https://obss.tech/en/new-graduates/) | program_only | Resmi acik pozisyon linki LinkedIn e yonlendiriyor; program sayfasi ayrica izlenir. |
+| [Innova](https://innova.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | [VNGRS](https://career.vngrs.com/) | tls_error | Resmi sitenin kariyer bağlantısında sertifika alan adı uyuşmazlığı. |
 | [Mobven](https://mobven.com/careers/) | linkedin_only | Resmi sayfa başvuruları LinkedIn üzerinden alıyor. |
 | [Masomo](https://www.masomo.com/) | linkedin_only | Resmi sayfanın kariyer bağlantısı LinkedIn. |
@@ -161,11 +153,13 @@ Ek erken kariyer panoları: PwC: https://pwc.wd3.myworkdayjobs.com/Global_Campus
 | [Unilever](https://unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals) | outside_current_watchlist | Resmi portal canlı kontrolü source_audit.json içinde. |
 | [TEB](https://group.bnpparibas/en/careers/all-job-offers/turkey) | http_403 | Resmi BNP Paribas Türkiye listesi HTTP ve Chromium ile 403. Alternatif resmi APEX portalı giriş ekranı; anonim liste bulunamadı. |
 | [Fibabanka](https://www.fibabanka.com.tr/hakkimizda/insan-kaynaklari/fibabankada-kariyer) | linkedin_only | Normal ilanlar LinkedIn; Fintern resmi program sayfası ayrı izlenir. |
+| [Albaraka Türk](https://albaraka.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | [Türkiye Finans](https://kariyer.turkiyefinans.com.tr/) | login_required | Resmi kariyer portalı aday girişi gerektiriyor; anonim ilan listesi doğrulanmadı. |
 | [Odeabank](https://www.odeabank.com.tr/hakkimizda/insan-kaynaklari) | linkedin_only |  |
 | [Aktif Bank](https://www.aktifbank.com.tr/hakkimizda/yetenek-ve-gelisim/insan-kaynaklari-uygulamamiz) | no_public_listing | Resmi Yetenek ve Gelişim sayfaları 200; deneyimsiz işe alım politikası var, anonim ilan listesi veya başvuru panosu bu sayfalarda yayımlanmıyor. |
 | [Alternatif Bank](https://www.alternatifbank.com.tr/insan-kaynaklari/ailemize-katilmak-istermisiniz) | linkedin_only | Resmi ailemize katılın sayfası 200; iş ilanları doğrudan LinkedIn şirket panosuna yönlendirilir. |
 | [PayTR](https://www.paytr.com/paytr-kariyer) | external_boards_only | Resmi sayfa LinkedIn ve Kariyer.net ilanlarına, ayrıca genel başvuru formuna yönlendiriyor. |
+| [Vakıf Katılım](https://vakifkatilim.bizdekariyer.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | [Mikro Yazılım](https://www.mikro.com.tr/hakkimizda/mikro-yazilimda-kariyer/) | external_boards_only | Şirketin kendi işe alım bağlantıları Kariyer.net firma profiline gidiyor; kariyer.mikrogruptech.com farklı işverenlerin ilan platformu olduğundan şirket kaynağı sayılmadı. |
 | [DenizBank](https://basvuru.denizbank.com/Login.aspx) | login_required | Resmi kariyer bağlantısı aday giriş ekranı; anonim ilan listesi doğrulanmadı. |
 | [Enpara](https://www.enpara.com/sirketim/kariyer) | external_boards_only | Resmi kariyer sayfası Yenibiriş Enpara aramasına yönlendiriyor; hedef son kontrolde 403. |
@@ -181,6 +175,12 @@ Ek erken kariyer panoları: PwC: https://pwc.wd3.myworkdayjobs.com/Global_Campus
 | [Mercer](https://mmc.wd1.myworkdayjobs.com/MMC) | adapter_pending | Resmi Marsh McLennan grup Workday panosu erisilebilir fakat ayni ilan yolu birden fazla kayitta dondugu icin mevcut Workday okuyucusu eksik liste yerine hata veriyor. Grup panosunda marka ayrimi da yok; ayrica calisilmali. |
 | [Enerjisa Üretim](https://live.peoplise.com/enerjisauretim/) | login_required | Resmi is ilanlari sayfasindaki Peoplise panosu anonim erisimde Account/Login ekrani donduruyor. Anonim ilan listesi dogrulanamadi. |
 | [Eczacıbaşı Holding](https://careers.eczacibasi.com) | adapter_pending | Resmi kariyer sitesi SuccessFactors CSB fakat arama sayfasi sunucu tarafinda ilan veya sayim dondurmuyor. Dolu/bos durum ayrimi dogrulanmadan etkinlestirilmedi. |
+| [BİM](https://kariyer.bim.com.tr/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
+| [Vodafone Türkiye](https://vodafone.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
+| [Aksigorta](https://aksigorta.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
+| [HDI Sigorta](https://hdisigorta.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
+| [Mapfre Sigorta](https://mapfre.hrpeak.com/jobs) | blocked_from_server | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
+| [Türk Telekom](https://basvuru.turktelekomkariyer.com.tr/ilan/site.aspx) | blocked_from_server | Resmi basvuru.turktelekomkariyer.com.tr HRPeak portalı yerel Türkiye IP'sinden çalışıyor fakat Almanya'daki VPS'ten her taramada okunamıyor (Türkiye dışı trafiğe yanıt vermiyor). Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 
 ## Henüz kaynak eşleşmeyen radar şirketleri
 

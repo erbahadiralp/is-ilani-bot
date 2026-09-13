@@ -588,6 +588,44 @@ class CompanySourcesTests(unittest.TestCase):
         self.assertEqual(len(twice), 1)
         self.assertEqual(KariyerMailScraper.parse_message(mail("<p>HTML var ama ilan yok</p>")), [])
 
+    def test_jobspy_linkedin_failure_does_not_drop_indeed_results(self):
+        import sys, types
+        from scrapers import jobspy_scraper
+        class Frame:
+            def __init__(self, rows):
+                self.rows = rows
+                self.empty = not rows
+            def iterrows(self):
+                return enumerate(self.rows)
+        def fake_scrape_jobs(site_name, **kwargs):
+            if site_name == ["linkedin"]:
+                raise AttributeError("'NoneType' object has no attribute 'lower'")
+            return Frame([{"title": "Junior Java Developer", "company": "Test", "location": "İstanbul",
+                           "job_url": "https://tr.indeed.com/viewjob?jk=1", "site": "indeed", "description": ""}])
+        fake = types.ModuleType("jobspy")
+        fake.scrape_jobs = fake_scrape_jobs
+        scraper = jobspy_scraper.JobSpyScraper()
+        scraper.random_sleep = Mock()
+        with patch.dict(sys.modules, {"jobspy": fake}), patch.object(jobspy_scraper.config, "SEARCH_QUERIES", ["junior java"]):
+            jobs = scraper.scrape()
+        self.assertEqual([j["source"] for j in jobs], ["indeed"])
+
+    def test_jobspy_linkedin_missing_job_level_is_made_none_safe(self):
+        import sys, types
+        from scrapers.jobspy_scraper import patch_linkedin_job_level
+        package, linkedin = types.ModuleType("jobspy"), types.ModuleType("jobspy.linkedin")
+        linkedin.parse_job_level = lambda soup: None
+        package.linkedin = linkedin
+        with patch.dict(sys.modules, {"jobspy": package, "jobspy.linkedin": linkedin}):
+            patch_linkedin_job_level()
+            patch_linkedin_job_level()  # ikinci cagri tekrar sarmamali
+            self.assertEqual(linkedin.parse_job_level(object()), "")
+            self.assertTrue(linkedin.parse_job_level._none_safe)
+        linkedin.parse_job_level = lambda soup: "Entry level"
+        with patch.dict(sys.modules, {"jobspy": package, "jobspy.linkedin": linkedin}):
+            patch_linkedin_job_level()
+            self.assertEqual(linkedin.parse_job_level(object()), "Entry level")
+
     def test_canonical_keeps_job_id(self):
         self.assertEqual(canonical("https://example.com/ilan?id=42&utm_source=test#apply"),"https://example.com/ilan?id=42")
 

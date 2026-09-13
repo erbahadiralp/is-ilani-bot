@@ -1,6 +1,6 @@
 # Sunucu güncellemesi (git ile)
 
-Güncel durum (10 Eylül 2026): 108 etkin kaynak, 108 başarılı son denetim; 1310 ham / 15 uygun kayıt; 14 sayfa monitörü. Ayrıntılı kapsam ve kalan işler [PROJE_DOKUMANTASYONU.md](PROJE_DOKUMANTASYONU.md) içindedir.
+Güncel durum (13 Eylül 2026): 96 etkin kaynak. VPS'ten erişilemeyen 12 kaynak kapatıldı; ayrıntısı PROJE_DOKUMANTASYONU.md içindedir. Ayrıntılı kapsam ve kalan işler [PROJE_DOKUMANTASYONU.md](PROJE_DOKUMANTASYONU.md) içindedir.
 
 Bu belge güncellemenin GitHub'dan `git pull` ile alınmasını anlatır. Yollar `jobhunter.service` dosyasındaki değerlere göre yazıldı (`/home/youruser/isapp`, sanal ortam `venv/`). Sunucunda farklıysa komutlarda kendi yolunu kullan.
 
@@ -62,9 +62,9 @@ venv/bin/python --version                          # 3.10 veya üzeri olmalı
 venv/bin/python -m pip install -r requirements.txt
 ```
 
-## 5. Chromium'u kur (18 kaynak için gerekli)
+## 5. Chromium'u kur (7 kaynak için gerekli)
 
-Tarayıcı gerektiren 18 kaynak vardır: 14 HRPeak panosu, 3 klasik SuccessFactors portalı (Softtech, Deloitte, Mercedes-Benz Otomotiv) ve Amazon. Chromium iki adımda kurulmalıdır:
+Tarayıcı gerektiren 7 kaynak vardır: 3 HRPeak panosu (ROKETSAN, Ziraat Katılım, Emlak Katılım), 3 klasik SuccessFactors portalı (Softtech, Deloitte, Mercedes-Benz Otomotiv) ve Amazon. Chromium iki adımda kurulmalıdır:
 
 ```sh
 sudo venv/bin/python -m playwright install-deps chromium   # sistem kütüphaneleri, yönetici yetkisiyle
@@ -73,7 +73,7 @@ venv/bin/python -m playwright install chromium             # tarayıcının kend
 
 İkinci komutu `sudo` ile çalıştırma. Playwright tarayıcıyı komutu çalıştıran kullanıcının ev dizinine (`~/.cache/ms-playwright`) indirir; `sudo` ile kurulursa tarayıcı root'a gider ve `youruser` kullanıcısıyla çalışan servis onu bulamaz. `playwright install --with-deps chromium` komutunu tek başına `sudo` ile çalıştırmak aynı hataya yol açar.
 
-Chromium kurulmazsa yalnız bu 18 kaynak hata verir; diğer kaynakların taraması sürer.
+Chromium kurulmazsa yalnız bu 7 kaynak hata verir; diğer kaynakların taraması sürer.
 
 `certificates/` klasörü artık depodadır ve `git pull` ile gelir. İçinde İş Bankası için herkese açık GlobalSign ara sertifikası bulunur; özel anahtar yoktur.
 
@@ -88,7 +88,7 @@ venv/bin/python tools/audit_programs.py
 venv/bin/python tools/audit_job_links.py
 ```
 
-Beklenen: 64 test başarılı; denetimde 108 kaynak. Sunucunun IP ve DNS koşulları yerelden farklıdır; bazı siteler sunucudan 403 veya 429 dönebilir. Tek bir kaynağın hatası taramayı durdurmaz, ancak o kaynak için en fazla altı saatte bir Telegram hata uyarısı gelir. Kalıcı hata veren bir kaynak varsa bilgisayarında `companies.json` içinde `enabled` değerini `false` yapıp pushla.
+Beklenen: 66 test başarılı; denetimde 96 kaynak. Sunucunun IP ve DNS koşulları yerelden farklıdır; bazı siteler sunucudan 403 veya 429 dönebilir. Tek bir kaynağın hatası taramayı durdurmaz, ancak o kaynak için en fazla altı saatte bir Telegram hata uyarısı gelir. Kalıcı hata veren bir kaynak varsa bilgisayarında `companies.json` içinde `enabled` değerini `false` yapıp pushla.
 
 Denetimler rapor dosyalarını yeniden yazar. Bir sonraki `git pull` öncesinde 3. adımdaki `git restore` komutunu çalıştır.
 

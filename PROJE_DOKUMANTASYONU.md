@@ -21,9 +21,9 @@ Ana radar `turkiye_yeni_mezun_sirket_takip_listesi.md` dosyasıdır. Kullanıcı
 | Ölçü | Değer | Önceki kayıt |
 |---|---:|---:|
 | Radar şirket adı | 301 | 301 |
-| Etkin resmi ilan kaynağı | 108 | 78 |
-| Son kayıtlı kontrolü başarılı etkin kaynak | 108 | 78 |
-| Etkin kaynağa eşleşen radar adı | 119 | 85 |
+| Etkin resmi ilan kaynağı | 96 | 78 |
+| Son kayıtlı kontrolü başarılı etkin kaynak | 96 | 78 |
+| Etkin kaynağa eşleşen radar adı | 108 | 85 |
 | Adresi kayıtlı, entegrasyonu tamamlanmamış radar adı | 36 | 33 |
 | Kaynak adresi henüz eşleşmeyen radar adı | 146 | 183 |
 | Son başarılı kontrollerde ham kayıt | 1310 | 1082 |
@@ -33,6 +33,10 @@ Ana radar `turkiye_yeni_mezun_sirket_takip_listesi.md` dosyasıdır. Kullanıcı
 Kaynak: `SOURCE_COVERAGE.md`, `source_audit.json`, `program_audit.json`. Sayılar 10 Eylül 2026 tarihli tam denetimden gelir; 108 etkin kaynağın tamamı okundu. Denetim sırasında yalnız Microsoft kaynağı, aynı gün tekrarlanan denetimler nedeniyle HTTP 429 döndürdü; Nokia'nın Oracle pod adresi de bir kez geçici DNS hatası verdi. İkisi de tek başına yeniden çalıştırıldığında başarılı okundu ve kayıt bu son sonuçları içerir. Hedefli denetim `source_audit.json` dosyasını eski kayıtlarla birleştirerek yazdığı için tam denetim sürerken çalıştırılmamalıdır; aksi halde biten kayıtlar geri alınır. Bu bir geliştirme ortamı ölçümüdür, sunucu sağlık göstergesi değildir. Grup panoları birden fazla şirketi kapsar; şirketin farklı adları aynı kaynağa eşleşebilir. Kaynak sayısı şirket sayısına eşit değildir.
 
 1310 ham kayıt, 1310 benzersiz yeni mezun ilanı değildir. Kıdemli, kapsam dışı, öğrenci programı ve başka panoda da bulunan kayıtlar içerir. 15 uygun kayıt da her taramada sabit kalmaz. 108/108 başarı bütün 301 şirketin bittiği anlamına gelmez. Gerçek sıfır ilan başarılı sonuç olabilir; bozuk sayfa sıfır ilan sayılmaz — bu oturumda eklenen boş panolar portalın kendi boş-durum metniyle veya sıfır sonuç sayımıyla doğrulanmıştır.
+
+**Sunucu farkı (13 Eylül 2026):** Yerel Türkiye IP'sinden 108 kaynak başarılı okunuyordu. Almanya'daki VPS'ten 12 kaynak her taramada hata verdiği için kapatıldı (`verification_status: blocked_from_server`). Bunların 10'u HRPeak'in Cloudflare arkasındaki SaaS ön yüzünde (Aksigorta, Albaraka Türk, Architecht, BİM, HDI Sigorta, Innova, Mapfre Sigorta, Vakıf Katılım, Vodafone Türkiye, Ziraat Teknoloji) ve hepsi aynı Cloudflare adreslerine çözümleniyor; kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Kuveyt Türk ve Türk Telekom Türkiye dışı trafiğe yanıt vermiyor. Tablodaki sayılar kapatma sonrasıdır. Bot Türkiye IP'li bir makineye taşınırsa bu kaynaklar yeniden etkinleştirilebilir.
+
+**Indeed:** Indeed Türkiye API'si VPS'ten proxy olmadan çalışıyor (HTTP 200). Ancak Türkiye'de bu profile uygun ilan çok az: İngilizce "junior ..." sorguları son yedi günde sıfır sonuç veriyor; Türkçe yeni mezun sorgularında çıkan ilanların hiçbiri yeni mezun yazılım ilanı değildi (yönetici asistanı, 5+ yıl yazılım müdürü, satış mühendisi). Bu yüzden Türkçe sorgu eklenmedi; LinkedIn ana kaynaktır.
 
 ## 4. Dosya haritası
 
@@ -136,6 +140,8 @@ Genel program kuralı teknoloji dışı MT ilanlarını da getirebilir. Bütün 
 Bütün ilanlar alınmaz. 27 hedef sorgu, sorgu başına 15 sonuç, son 7 gün ve İstanbul/Türkiye ayarı kullanılır. LinkedIn açıklaması alınması istenir; ardından ortak filtre uygulanır. Sorgular arasında bekleme ve sorgu başına hata izolasyonu vardır.
 
 Resmi şirket taraması radar dosyasına bağlıdır. LinkedIn/Indeed sonuçları aynı şirket whitelist'ine kilitli değildir; profile uyan başka işverenler gelebilir. Sonuç sınırı, sıralama, konum ve erişim kapsamı etkiler. Bu ortamda gerçek LinkedIn/Indeed → Telegram uçtan uca akışı yeniden doğrulanmadı.
+
+**Bilinen kütüphane hatası (python-jobspy 1.1.80):** LinkedIn açıklaması çekilirken ilan sayfasında "Seniority level" alanı yoksa kütüphane `None.lower()` ile çöker ve tek ilan bütün sorguyu düşürür. Açıklama getirme önceden kapalıyken bu yol hiç çalışmadığı için hata görünmüyordu; açıldıktan sonra sunucuda bütün LinkedIn/Indeed sorguları `'NoneType' object has no attribute 'lower'` hatası verdi. `scrapers/jobspy_scraper.py` eksik alanı boş metne çeviren hedefli bir yama uygular ve LinkedIn ile Indeed'i ayrı çağırır; böylece bir sitenin hatası diğerinin sonuçlarını silmez. Kütüphane sürümü yükseltilirse yamanın hâlâ gerekip gerekmediği kontrol edilmelidir.
 
 ## 9. Kaynağı nasıl buluyor ve doğruluyorum?
 
@@ -415,7 +421,7 @@ python tools/audit_job_links.py
 python main.py
 ```
 
-Windows browser kurulumu `python -m playwright install chromium`. Tarayıcı gerektiren 18 kaynak vardır: 14 HRPeak panosu, 3 klasik SuccessFactors portalı (Softtech, Deloitte, Mercedes-Benz Otomotiv) ve Amazon. Linux'ta Chromium iki adımda kurulur: sistem kütüphaneleri `sudo ... playwright install-deps chromium`, tarayıcının kendisi ise botu çalıştıran kullanıcıyla `playwright install chromium`; ikinci adım `sudo` ile çalıştırılırsa tarayıcı root kullanıcısına iner ve servis onu bulamaz. Git ile güncelleme adımları `SERVER_UPDATE.md` içindedir. İş Bankası için certificates klasörü de gereklidir; artık depodadır.
+Windows browser kurulumu `python -m playwright install chromium`. Tarayıcı gerektiren 7 etkin kaynak vardır: 3 HRPeak panosu (ROKETSAN, Ziraat Katılım, Emlak Katılım), 3 klasik SuccessFactors portalı (Softtech, Deloitte, Mercedes-Benz Otomotiv) ve Amazon. Linux'ta Chromium iki adımda kurulur: sistem kütüphaneleri `sudo ... playwright install-deps chromium`, tarayıcının kendisi ise botu çalıştıran kullanıcıyla `playwright install chromium`; ikinci adım `sudo` ile çalıştırılırsa tarayıcı root kullanıcısına iner ve servis onu bulamaz. Git ile güncelleme adımları `SERVER_UPDATE.md` içindedir. İş Bankası için certificates klasörü de gereklidir; artık depodadır.
 
 İlk taramada DB'de olmayan mevcut uygun ilanlar da bildirilir; bunlar o anda yeni yayınlanmış olmak zorunda değildir. Programların ilk okuması sessiz başlangıçtır. İki davranış farklıdır. Gerçek Telegram ve sunucu uçtan uca doğrulaması kullanıcı ortamında yapılmalıdır.
 

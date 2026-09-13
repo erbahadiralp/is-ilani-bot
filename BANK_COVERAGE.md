@@ -13,9 +13,9 @@
 | DenizBank | login_required | Yok | Resmi kariyer bağlantısı aday giriş ekranı; anonim ilan listesi doğrulanmadı. |
 | ING Türkiye | verified_at_last_audit | Yok | Resmi Türkiye ilanları; sayfalama ve deneyim şartları kontrol edilir. |
 | TEB | http_403 | Yok | Resmi BNP Paribas Türkiye listesi HTTP ve Chromium ile 403. Alternatif resmi APEX portalı giriş ekranı; anonim liste bulunamadı. |
-| Kuveyt Türk | verified_at_last_audit | TechTalent | Resmi Katılbize ilan portalı; TechTalent programı ayrıca izlenir. |
+| Kuveyt Türk | blocked_from_server | TechTalent | Resmi katilbize.com panosu yerel Türkiye IP'sinden çalışıyor fakat Almanya'daki VPS'ten her taramada okunamıyor (Türkiye dışı trafiğe yanıt vermiyor). Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | Türkiye Finans | login_required | Yok | Resmi kariyer portalı aday girişi gerektiriyor; anonim ilan listesi doğrulanmadı. |
-| Albaraka Türk | verified_at_last_audit | Kariyer ve Yetenek Duyuruları | Resmi HRPeak panosu anonim Chromium ile açılıyor; şirket başlığı, boş durum ve ilan detayları doğrulanır. Chromium kurulmalıdır. Sayfalama görünürse eksik liste yerine hata raporlanır. |
+| Albaraka Türk | blocked_from_server | Kariyer ve Yetenek Duyuruları | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | Fibabanka | linkedin_only | Fintern Future Talent Program | Normal ilanlar LinkedIn; Fintern resmi program sayfası ayrı izlenir. |
 | Odeabank | linkedin_only | Yok |  |
 | Alternatif Bank | linkedin_only | Yok | Resmi ailemize katılın sayfası 200; iş ilanları doğrudan LinkedIn şirket panosuna yönlendirilir. |
@@ -23,7 +23,7 @@
 | Ziraat Bankası | announcement_monitor_only | İşe Alım Duyuruları | Resmi İK duyuru sayfası değişiklik takibinde; mevcut öğrenci staj duyurusu aktif yeni mezun işi sayılmadı. |
 | VakıfBank | announcement_monitor_only | İşe Alım Duyuruları | İşe alım duyuru sayfası değişiklik takibinde; şu an ilan yok. BT pozisyon tanıtımları açık ilan sayılmadı. |
 | Halkbank | verified_at_last_audit | Yok | Resmi Yeni Mezunum ilan listesi. Genel başvuru profil filtresinden geçmez. |
-| Vakıf Katılım | verified_at_last_audit | START / My Talent ve Yetenek Programları | Resmi HRPeak panosu anonim Chromium ile açılıyor; şirket başlığı, boş durum ve ilan detayları doğrulanır. Chromium kurulmalıdır. Sayfalama görünürse eksik liste yerine hata raporlanır. |
+| Vakıf Katılım | blocked_from_server | START / My Talent ve Yetenek Programları | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | Ziraat Katılım | verified_at_last_audit | Yok | Resmi HRPeak panosu anonim Chromium ile açılıyor; şirket başlığı, boş durum ve ilan detayları doğrulanır. Chromium kurulmalıdır. Sayfalama görünürse eksik liste yerine hata raporlanır. |
 | Emlak Katılım | verified_at_last_audit | Yok | Resmi HRPeak panosu anonim Chromium ile açılıyor; şirket başlığı, boş durum ve ilan detayları doğrulanır. Chromium kurulmalıdır. Sayfalama görünürse eksik liste yerine hata raporlanır. |
 | Enpara | external_boards_only | Yok | Resmi kariyer sayfası Yenibiriş Enpara aramasına yönlendiriyor; hedef son kontrolde 403. |
@@ -39,11 +39,11 @@
 | BKM | no_public_listing | Yok | Resmi ana sayfa ve BKM Hakkında bağlantıları incelendi; bu sayfalarda anonim ilan listesi veya kariyer panosu bağlantısı bulunamadı. İlan entegrasyonu tamamlanmadı. |
 | Intertech | linkedin_only | Yok | Resmi iş ilanları bağlantısı LinkedIn; Firsttech/Starttech programları resmi sayfada ayrı tanıtılıyor. |
 | Softtech | verified_at_last_audit | Yetenek Kuşağı | Anonim Chromium okuyucusu; canlı tarayıcıda 4 ilan doğrulandı. Sayfalama toplamıyla tutarlılık ve sabit ilan kimliği kontrol edilir. Sunucuda Playwright Chromium kurulmalı. |
-| Architecht | verified_at_last_audit | Yok | Resmi HRPeak panosu anonim Chromium ile açılıyor; şirket başlığı, boş durum ve ilan detayları doğrulanır. Chromium kurulmalıdır. Sayfalama görünürse eksik liste yerine hata raporlanır. |
+| Architecht | blocked_from_server | Yok | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 | Aktif Bank | no_public_listing | Yok | Resmi Yetenek ve Gelişim sayfaları 200; deneyimsiz işe alım politikası var, anonim ilan listesi veya başvuru panosu bu sayfalarda yayımlanmıyor. |
 | N Kolay | parent_brand | Yok | Resmi kurumsal sayfa N Kolay’ın Aktif Bank markası olduğunu doğrular. Ayrı anonim ilan panosu doğrulanmadı; Aktif Bank kaynak durumu geçerlidir. |
 | AlbarakaTech Global | verified_at_last_audit | Yok | İlan metni resmi siteden okunur; başvuru bağlantısı Kariyer.net olabilir. |
-| Ziraat Teknoloji | verified_at_last_audit | Yok | Resmi HRPeak panosu anonim Chromium ile açılıyor; şirket başlığı, boş durum ve ilan detayları doğrulanır. Chromium kurulmalıdır. Sayfalama görünürse eksik liste yerine hata raporlanır. Banka iştiraklerini tamamlama isteği kapsamında ek kaynak. |
+| Ziraat Teknoloji | blocked_from_server | Yok | Yerel Türkiye IP'sinden doğrulanmış çalışan HRPeak kaynağı. Almanya'daki VPS'ten her taramada HTTP 403 dönüyor: HRPeak'in Cloudflare arkasındaki SaaS ön yüzü (104.26.x / 172.67.x) veri merkezi IP'sini engelliyor. Kendi sunucusunda barınan HRPeak kaynakları (ROKETSAN, Ziraat Katılım, Emlak Katılım) etkilenmiyor. Bot Türkiye IP'li bir makinede çalışırsa yeniden etkinleştirilebilir. |
 
 Tarih ve ham/uygun ilan sayıları source_audit.json içindedir. Raporda ING Türkiye, ING kaynak adına eşleştirilir; aynı banka için ikinci okuyucu oluşturulmaz.
 

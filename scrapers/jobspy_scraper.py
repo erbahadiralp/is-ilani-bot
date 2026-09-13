@@ -15,6 +15,31 @@ from watchlist import relevant, program_name
 
 logger = logging.getLogger("scraper.jobspy")
 
+SITES = ("linkedin", "indeed")
+
+
+def patch_linkedin_job_level():
+    """python-jobspy 1.1.80 hatasini onler.
+
+    LinkedIn ilan detayinda "Seniority level" alani yoksa parse_job_level None dondurur;
+    kutuphane ardindan job_details.get("job_level", "").lower() cagirir. Anahtar var fakat
+    degeri None oldugu icin varsayilan kullanilmaz ve tek ilan butun sorguyu dusurur.
+    Bos metin dondurmek kutuphanenin geri kalan davranisini degistirmez.
+    """
+    try:
+        import jobspy.linkedin as linkedin
+    except ImportError:
+        return
+    original = getattr(linkedin, "parse_job_level", None)
+    if original is None or getattr(original, "_none_safe", False):
+        return
+
+    def none_safe(soup):
+        return original(soup) or ""
+
+    none_safe._none_safe = True
+    linkedin.parse_job_level = none_safe
+
 
 class JobSpyScraper(BaseScraper):
     """
@@ -41,30 +66,34 @@ class JobSpyScraper(BaseScraper):
                 "python-jobspy kurulu değil. Çalıştırın: pip install python-jobspy"
             )
 
+        patch_linkedin_job_level()
         all_jobs: list[dict] = []
         seen_urls: set[str] = set()
 
         for query in config.SEARCH_QUERIES:
             self.logger.info("JobSpy sorgu: '%s'", query)
-            try:
-                jobs = self._scrape_query(scrape_jobs, query)
+            # Siteler ayri cagrilir: tek cagride bir sitenin hatasi digerinin sonuclarini da siliyordu.
+            for site in SITES:
+                try:
+                    jobs = self._scrape_query(scrape_jobs, query, site)
+                except Exception as e:
+                    self.logger.error("JobSpy hata (%s, query='%s'): %s", site, query, e)
+                    continue
                 for job in jobs:
                     url = job.get("url", "")
                     if url and url not in seen_urls:
                         seen_urls.add(url)
                         all_jobs.append(job)
-            except Exception as e:
-                self.logger.error("JobSpy hata (query='%s'): %s", query, e)
             # Sorgular arası bekleme (rate limit)
             self.random_sleep(2, 5)
 
         self.logger.info("JobSpy toplam: %d benzersiz ilan", len(all_jobs))
         return all_jobs
 
-    def _scrape_query(self, scrape_jobs_fn, query: str) -> list[dict]:
-        """Tek bir sorgu için JobSpy çalıştır."""
+    def _scrape_query(self, scrape_jobs_fn, query: str, site: str) -> list[dict]:
+        """Tek bir sorgu ve site için JobSpy çalıştır."""
         df = scrape_jobs_fn(
-            site_name=["linkedin", "indeed"],
+            site_name=[site],
             search_term=query,
             location=config.SEARCH_LOCATION,
             results_wanted=15,          # Sorgu başına max ilan
