@@ -1,4 +1,4 @@
-# Job Hunter
+# İş İlanı Bulucu 
 
 Türkiye'deki şirketlerin **resmî kariyer sayfalarını ve ATS portallerini** düzenli olarak tarayan, yeni mezun / junior seviyesindeki teknoloji ilanlarını **Telegram'dan anlık bildiren** bir otomasyon botu.
 
